@@ -1,0 +1,10 @@
+secrets.yaml
+*.db
+*.log
+*.xml
+*.db-journal
+*.sqlite
+*.txt
+deps
+www
+.HA_VERSION
