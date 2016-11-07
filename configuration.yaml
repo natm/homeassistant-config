@@ -5,18 +5,7 @@ homeassistant:
   elevation: 3
   temperature_unit: C
   time_zone: Europe/London
-  customize:
-    binary_sensor.workshop_door_left:
-      hidden: true
-    binary_sensor.workshop_door_right:
-      hidden: true
-    light.barn_air_compressor:
-      friendly_name: Air compressor
-      icon: mdi:engine
-    sensor.bedroom_master_humidity:
-      friendly_name: Humidity
-    sensor.bedroom_master_temperature:
-      friendly_name: Temperature
+  customize: !include customize.yaml
 
 sensor:
    - platform: yr
@@ -80,55 +69,7 @@ device_tracker:
   platform: owntracks
   max_gps_accuracy: 200
 
-camera:
-  - platform: generic
-    name: Drive 1
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/101/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Drive 2
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/201/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Barn 1
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/301/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Barn 2
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/401/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Workshop 1
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/501/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Shed 1
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/601/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
-
-  - platform: generic
-    name: Woods 1
-    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/701/picture
-    username: !secret cctv_cctvnvr1_username
-    password: !secret cctv_cctvnvr1_password
-    authentication: basic
+camera: !include cameras.yaml
 
 light:
   - platform: mqtt
@@ -253,38 +194,38 @@ binary_sensor:
   - platform: mqtt
     name: "shed door"
     state_topic: "pirelay1/doorcontact1"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
     sensor_class: opening
 
   - platform: mqtt
     name: "Shed inside light switch"
     state_topic: "pirelay1/lightswitch1"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
 
   - platform: mqtt
     name: "Barn inside switch 1"
     state_topic: "pirelay2/lightswitch1"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
 
   - platform: mqtt
     name: "Barn inside switch 2"
     state_topic: "pirelay2/lightswitch2"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
 
   - platform: mqtt
     name: "Barn inside switch 3"
     state_topic: "pirelay2/lightswitch3"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
 
   - platform: mqtt
     name: "Barn inside switch 4"
     state_topic: "pirelay2/lightswitch4"
-    payload_on: "ON" 
+    payload_on: "ON"
     payload_off: "OFF"
 
   - platform: mqtt
@@ -350,7 +291,7 @@ group:
     workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, camera.workshop_1, binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch, sensor.workshop_door_left_template, sensor.workshop_door_right_template
     test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
     internet: sensor.wifi_clients, sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fastcom_download
-    bedroom_master: 
+    bedroom_master:
       name: Master bedroom
       entities:
         - sensor.bedroom_master_humidity

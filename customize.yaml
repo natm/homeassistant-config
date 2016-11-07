@@ -1,0 +1,11 @@
+    binary_sensor.workshop_door_left:
+      hidden: true
+    binary_sensor.workshop_door_right:
+      hidden: true
+    light.barn_air_compressor:
+      friendly_name: Air compressor
+      icon: mdi:engine
+    sensor.bedroom_master_humidity:
+      friendly_name: Humidity
+    sensor.bedroom_master_temperature:
+      friendly_name: Temperature
