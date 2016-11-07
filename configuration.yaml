@@ -1,0 +1,579 @@
+homeassistant:
+  name: Llwyn-y-Gorras
+  latitude: !secret location_latitude
+  longitude: !secret location_longitude
+  elevation: 3
+  temperature_unit: C
+  time_zone: Europe/London
+  customize:
+    binary_sensor.workshop_door_left:
+      hidden: true
+    binary_sensor.workshop_door_right:
+      hidden: true
+    light.barn_air_compressor:
+      friendly_name: Air compressor
+      icon: mdi:engine
+    sensor.bedroom_master_humidity:
+      friendly_name: Humidity
+    sensor.bedroom_master_temperature:
+      friendly_name: Temperature
+
+sensor:
+   - platform: yr
+   - platform: speedtest
+     monitored_conditions:
+     - ping
+     - download
+     - upload
+   - platform: fastdotcom
+     minute:
+     - 12
+     - 32
+   - platform: snmp
+     name: Wifi clients
+     host: 185.61.112.94
+     baseoid: 1.3.6.1.4.1.9.9.618.1.8.12.0
+     community: !secret snmp_community_readonly
+     unit_of_measurement: wifi clients
+   - platform: mqtt
+     name: pirelay1 version
+     state_topic: "pirelay1/version"
+   - platform: mqtt
+     name: pirelay2 version
+     state_topic: "pirelay2/version"
+   - platform: mqtt
+     name: pirelay3 version
+     state_topic: "pirelay3/version"
+   - platform: mqtt
+     name: bedroom master temperature
+     unit_of_measurement: '°C'
+     state_topic: roomsensors/bedroom-master/temperature/degrees
+   - platform: mqtt
+     name: bedroom master humidity
+     unit_of_measurement: '%'
+     state_topic: roomsensors/bedroom-master/humidity/relative
+   - platform: template
+     sensors:
+       workshop_door_left_template:
+         value_template: '{% if is_state("binary_sensor.workshop_door_left", "on") %}closed{% else %}open{% endif %}'
+         friendly_name: 'Workshop door left'
+       workshop_door_right_template:
+         value_template: '{% if is_state("binary_sensor.workshop_door_right", "on") %}closed{% else %}open{% endif %}'
+         friendly_name: 'Workshop door right'
+
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: !secret mqtt_client_id
+  keepalive: 60
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+frontend:
+history:
+logbook:
+updater:
+sun:
+conversation:
+
+device_tracker:
+  platform: owntracks
+  max_gps_accuracy: 200
+
+camera:
+  - platform: generic
+    name: Drive 1
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/101/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Drive 2
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/201/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Barn 1
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/301/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Barn 2
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/401/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Workshop 1
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/501/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Shed 1
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/601/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+  - platform: generic
+    name: Woods 1
+    still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/701/picture
+    username: !secret cctv_cctvnvr1_username
+    password: !secret cctv_cctvnvr1_password
+    authentication: basic
+
+light:
+  - platform: mqtt
+    name: "Workshop indoor lights"
+    state_topic: "pirelay2/output1/status"
+    command_topic: "pirelay2/output1/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Workshop outdoor flood"
+    state_topic: "pirelay2/output2/status"
+    command_topic: "pirelay2/output2/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Barn lower storage lights"
+    state_topic: "pirelay2/output3/status"
+    command_topic: "pirelay2/output3/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Barn slide fluorescent"
+    state_topic: "pirelay2/output4/status"
+    command_topic: "pirelay2/output4/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Barn xmas lights 1"
+    state_topic: "pirelay2/output5/status"
+    command_topic: "pirelay2/output5/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Barn air compressor"
+    state_topic: "pirelay2/output6/status"
+    command_topic: "pirelay2/output6/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Shed fluorescent light 1"
+    state_topic: "pirelay1/output4/status"
+    command_topic: "pirelay1/output4/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Shed LED flood light rear"
+    state_topic: "pirelay1/output1/status"
+    command_topic: "pirelay1/output1/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Shed LED flood light side"
+    state_topic: "pirelay1/output2/status"
+    command_topic: "pirelay1/output2/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Shed LED flood light front"
+    state_topic: "pirelay1/output3/status"
+    command_topic: "pirelay1/output3/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Test light 1"
+    state_topic: "pirelay3/output1/status"
+    command_topic: "pirelay3/output1/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Test light 2"
+    state_topic: "pirelay3/output2/status"
+    command_topic: "pirelay3/output2/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+  - platform: mqtt
+    name: "Test light 3"
+    state_topic: "pirelay3/output3/status"
+    command_topic: "pirelay3/output3/switch"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+
+
+binary_sensor:
+  - platform: mqtt
+    name: "shed door"
+    state_topic: "pirelay1/doorcontact1"
+    payload_on: "ON" 
+    payload_off: "OFF"
+    sensor_class: opening
+
+  - platform: mqtt
+    name: "Shed inside light switch"
+    state_topic: "pirelay1/lightswitch1"
+    payload_on: "ON" 
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Barn inside switch 1"
+    state_topic: "pirelay2/lightswitch1"
+    payload_on: "ON" 
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Barn inside switch 2"
+    state_topic: "pirelay2/lightswitch2"
+    payload_on: "ON" 
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Barn inside switch 3"
+    state_topic: "pirelay2/lightswitch3"
+    payload_on: "ON" 
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Barn inside switch 4"
+    state_topic: "pirelay2/lightswitch4"
+    payload_on: "ON" 
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Workshop inside light switch"
+    state_topic: "pirelay2/lightswitch5"
+    payload_on: "ON"
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Workshop outdoor light switch"
+    state_topic: "pirelay2/lightswitch6"
+    payload_on: "ON"
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "Workshop door left"
+    state_topic: "pirelay2/doorcontact1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    hidden: True
+
+  - platform: mqtt
+    name: "Workshop door right"
+    state_topic: "pirelay2/doorcontact2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    hidden: True
+
+  - platform: mqtt
+    name: "test switch 1"
+    state_topic: "pirelay3/lightswitch1"
+    payload_on: "ON"
+    payload_off: "OFF"
+
+  - platform: mqtt
+    name: "test door 1"
+    state_topic: "pirelay3/doorcontact2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    sensor_class: opening
+
+group:
+    outdoors:
+      name: Outdoors
+      view: yes
+      entities:
+        - group.shed
+        - group.barn
+        - group.workshop
+    cameras:
+      name: Cameras
+      view: yes
+      entities:
+        - camera.Drive_1
+        - camera.Drive_2
+        - camera.Barn_1
+        - camera.Barn_2
+        - camera.Workshop_1
+        - camera.Shed_1
+        - camera.Woods_1
+    shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, binary_sensor.shed_door, camera.shed_1, sensor.pirelay1_version
+    barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor, camera.barn_1, camera.barn_2, sensor.pirelay2_version, binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
+    workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, camera.workshop_1, binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch, sensor.workshop_door_left_template, sensor.workshop_door_right_template
+    test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
+    internet: sensor.wifi_clients, sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fastcom_download
+    bedroom_master: 
+      name: Master bedroom
+      entities:
+        - sensor.bedroom_master_humidity
+        - sensor.bedroom_master_temperature
+
+automation:
+-  alias: barn air compressor on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_air_compressor
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_air_compressor
+-  alias: barn air compressor off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_air_compressor
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_air_compressor
+-  alias: barn xmas lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_2
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_xmas_lights_1
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_xmas_lights_1
+-  alias: barn xmas lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_2
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_xmas_lights_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_xmas_lights_1
+-  alias: barn storage lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_3
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_lower_storage_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_lower_storage_lights
+-  alias: barn storage lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_3
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_lower_storage_lights
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_lower_storage_lights
+-  alias: barn fluorescent lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_4
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_slide_fluorescent
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_slide_fluorescent
+-  alias: barn fluorescent lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_4
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_slide_fluorescent
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_slide_fluorescent
+-  alias: shed indoor lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.shed_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.shed_fluorescent_light_1
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.shed_fluorescent_light_1
+-  alias: shed indoor lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.shed_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.shed_fluorescent_light_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.shed_fluorescent_light_1
+
+-  alias: test lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.test_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.test_light_1
+      state: 'off'
+   action:
+#    - service: notify.pushover
+#      data:
+#        message: "light toggled"
+    - service: light.turn_on
+      entity_id: light.test_light_1
+-  alias: test lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.test_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.test_light_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.test_light_1
+-  alias: workshop indoor lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.workshop_indoor_lights
+-  alias: workshop indoor lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.workshop_indoor_lights
+-  alias: workshop lights on when door opens
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_door_right
+     from: 'on'
+     to: 'off'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.workshop_indoor_lights
+
+notify:
+  - name: pushover
+    platform: pushover
+    api_key: !secret pushover_api_key
+    user_key: !secret pushover_user_key
