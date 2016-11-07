@@ -1,0 +1,214 @@
+-  alias: barn air compressor on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_air_compressor
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_air_compressor
+-  alias: barn air compressor off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_air_compressor
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_air_compressor
+-  alias: barn xmas lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_2
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_xmas_lights_1
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_xmas_lights_1
+-  alias: barn xmas lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_2
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_xmas_lights_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_xmas_lights_1
+-  alias: barn storage lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_3
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_lower_storage_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_lower_storage_lights
+-  alias: barn storage lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_3
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_lower_storage_lights
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_lower_storage_lights
+-  alias: barn fluorescent lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_4
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_slide_fluorescent
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.barn_slide_fluorescent
+-  alias: barn fluorescent lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.barn_inside_switch_4
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.barn_slide_fluorescent
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.barn_slide_fluorescent
+-  alias: shed indoor lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.shed_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.shed_fluorescent_light_1
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.shed_fluorescent_light_1
+-  alias: shed indoor lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.shed_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.shed_fluorescent_light_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.shed_fluorescent_light_1
+
+-  alias: test lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.test_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.test_light_1
+      state: 'off'
+   action:
+#    - service: notify.pushover
+#      data:
+#        message: "light toggled"
+    - service: light.turn_on
+      entity_id: light.test_light_1
+-  alias: test lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.test_switch_1
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.test_light_1
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.test_light_1
+-  alias: workshop indoor lights on
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.workshop_indoor_lights
+-  alias: workshop indoor lights off
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_inside_light_switch
+     from: 'off'
+     to: 'on'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'on'
+   action:
+    - service: light.turn_off
+      entity_id: light.workshop_indoor_lights
+-  alias: workshop lights on when door opens
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.workshop_door_right
+     from: 'on'
+     to: 'off'
+   condition:
+      condition: state
+      entity_id: light.workshop_indoor_lights
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.workshop_indoor_lights
