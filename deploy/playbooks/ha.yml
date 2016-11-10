@@ -1,0 +1,9 @@
+---
+
+- name: Home Assistant and configurations
+  hosts: all
+  sudo: True
+
+  roles:
+    - { role: homeassistant,              tags: ["homeassistant"] }
+    - { role: configs,                    tags: ["configs"] }
