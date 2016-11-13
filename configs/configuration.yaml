@@ -38,6 +38,8 @@ group: !include groups.yaml
 
 automation: !include automation.yaml
 
+scene: !include scenes.yaml
+
 notify:
   - name: pushover
     platform: pushover

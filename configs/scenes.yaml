@@ -1,0 +1,10 @@
+- name: All outdoor lights off
+  entities:
+    light.shed_led_flood_light_front: off
+    light.shed_led_flood_light_rear: off
+    light.shed_led_flood_light_side: off
+    light.workshop_indoor_lights: off
+    light.workshop_outdoor_flood: off
+    light.barn_lower_storage_lights: off
+    light.barn_slide_fluorescent: off
+    light.barn_xmas_lights_1: off
