@@ -1,0 +1,75 @@
+- platform: mqtt
+  name: "shed door"
+  state_topic: "pirelay1/doorcontact1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  sensor_class: opening
+
+- platform: mqtt
+  name: "Shed inside light switch"
+  state_topic: "pirelay1/lightswitch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Barn inside switch 1"
+  state_topic: "pirelay2/lightswitch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Barn inside switch 2"
+  state_topic: "pirelay2/lightswitch2"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Barn inside switch 3"
+  state_topic: "pirelay2/lightswitch3"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Barn inside switch 4"
+  state_topic: "pirelay2/lightswitch4"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Workshop inside light switch"
+  state_topic: "pirelay2/lightswitch5"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Workshop outdoor light switch"
+  state_topic: "pirelay2/lightswitch6"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Workshop door left"
+  state_topic: "pirelay2/doorcontact1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  hidden: True
+
+- platform: mqtt
+  name: "Workshop door right"
+  state_topic: "pirelay2/doorcontact2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  hidden: True
+
+- platform: mqtt
+  name: "test switch 1"
+  state_topic: "pirelay3/lightswitch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "test door 1"
+  state_topic: "pirelay3/doorcontact2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  sensor_class: opening

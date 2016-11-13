@@ -1,0 +1,44 @@
+- platform: yr
+- platform: speedtest
+  monitored_conditions:
+  - ping
+  - download
+  - upload
+- platform: fastdotcom
+  minute:
+  - 12
+  - 32
+- platform: snmp
+  name: Wifi clients
+  host: 185.61.112.94
+  baseoid: 1.3.6.1.4.1.9.9.618.1.8.12.0
+  community: !secret snmp_community_readonly
+  unit_of_measurement: wifi clients
+- platform: mqtt
+  name: pirelay1 version
+  state_topic: "pirelay1/version"
+- platform: mqtt
+  name: pirelay2 version
+  state_topic: "pirelay2/version"
+- platform: mqtt
+  name: pirelay3 version
+  state_topic: "pirelay3/version"
+- platform: mqtt
+  name: bedroom master temperature
+  unit_of_measurement: '°C'
+  state_topic: roomsensors/bedroom-master/temperature/degrees
+- platform: mqtt
+  name: bedroom master humidity
+  unit_of_measurement: '%'
+  state_topic: roomsensors/bedroom-master/humidity/relative
+- platform: template
+  sensors:
+    shed_door_template:
+      value_template: '{% if is_state("binary_sensor.shed_door", "on") %}closed{% else %}open{% endif %}'
+      friendly_name: 'Door'
+    workshop_door_left_template:
+      value_template: '{% if is_state("binary_sensor.workshop_door_left", "on") %}closed{% else %}open{% endif %}'
+      friendly_name: 'Workshop door left'
+    workshop_door_right_template:
+      value_template: '{% if is_state("binary_sensor.workshop_door_right", "on") %}closed{% else %}open{% endif %}'
+      friendly_name: 'Workshop door right'

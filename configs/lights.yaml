@@ -1,0 +1,116 @@
+- platform: mqtt
+  name: "Workshop indoor lights"
+  state_topic: "pirelay2/output1/status"
+  command_topic: "pirelay2/output1/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Workshop outdoor flood"
+  state_topic: "pirelay2/output2/status"
+  command_topic: "pirelay2/output2/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Barn lower storage lights"
+  state_topic: "pirelay2/output3/status"
+  command_topic: "pirelay2/output3/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Barn slide fluorescent"
+  state_topic: "pirelay2/output4/status"
+  command_topic: "pirelay2/output4/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Barn xmas lights 1"
+  state_topic: "pirelay2/output5/status"
+  command_topic: "pirelay2/output5/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Barn air compressor"
+  state_topic: "pirelay2/output6/status"
+  command_topic: "pirelay2/output6/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Shed fluorescent light 1"
+  state_topic: "pirelay1/output4/status"
+  command_topic: "pirelay1/output4/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Shed LED flood light rear"
+  state_topic: "pirelay1/output1/status"
+  command_topic: "pirelay1/output1/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Shed LED flood light side"
+  state_topic: "pirelay1/output2/status"
+  command_topic: "pirelay1/output2/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Shed LED flood light front"
+  state_topic: "pirelay1/output3/status"
+  command_topic: "pirelay1/output3/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Test light 1"
+  state_topic: "pirelay3/output1/status"
+  command_topic: "pirelay3/output1/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Test light 2"
+  state_topic: "pirelay3/output2/status"
+  command_topic: "pirelay3/output2/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+
+- platform: mqtt
+  name: "Test light 3"
+  state_topic: "pirelay3/output3/status"
+  command_topic: "pirelay3/output3/switch"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
