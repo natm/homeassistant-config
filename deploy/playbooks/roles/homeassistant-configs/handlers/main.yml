@@ -1,0 +1,4 @@
+- name: restart home assistant
+  service:
+    name: hass-daemon
+    state: restarted

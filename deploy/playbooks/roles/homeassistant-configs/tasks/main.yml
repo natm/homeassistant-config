@@ -1,0 +1,11 @@
+- name: Copy config YAML files
+  copy:
+    src={{ item }}
+    dest=/var/opt/homeassistant
+    owner=hass
+    group=hass
+    mode=0644
+  with_fileglob:
+    - ../../configs/*.yaml
+  notify:
+    - restart home assistant

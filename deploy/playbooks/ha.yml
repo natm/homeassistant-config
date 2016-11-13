@@ -6,4 +6,4 @@
 
   roles:
     - { role: homeassistant,              tags: ["homeassistant"] }
-    - { role: configs,                    tags: ["configs"] }
+    - { role: homeassistant-configs,      tags: ["homeassistant-configs"] }
