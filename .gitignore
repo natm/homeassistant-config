@@ -8,3 +8,6 @@ secrets.yaml
 deps
 www
 .HA_VERSION
+venv/*
+*.pyc
+*.retry
