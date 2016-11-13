@@ -2,7 +2,9 @@
 
 Our [Home Assistant](https://home-assistant.io/) configuration files.
 
-## Development & deployment
+Lots of integration and automation still required - [todo list](TODO.md).
+
+## Deployment
 
 This git repo is the source of truth, changes are made in a clone and then pushed to the local server using Ansible.
 

@@ -1,3 +1,3 @@
 # Home automation to-do list
 
-* abc
+* Write a daemon to grab AAISP quota + sync rates and send it to MQTT
