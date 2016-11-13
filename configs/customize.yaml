@@ -1,10 +1,28 @@
+# shed
+    binary_sensor.shed_door:
+      hidden: true
+    sensor.shed_door_template:
+      icon: mdi:glassdoor
+    binary_sensor.shed_inside_light_switch:
+      friendly_name: Light switch
+    light.shed_led_flood_light_front:
+      friendly_name: Flood front
+    light.shed_led_flood_light_rear:
+      friendly_name: Flood rear
+    light.shed_led_flood_light_side:
+      friendly_name: Flood side
+    light.shed_fluorescent_light_1:
+      friendly_name: Inside light
+# workshop
     binary_sensor.workshop_door_left:
       hidden: true
     binary_sensor.workshop_door_right:
       hidden: true
+# barn
     light.barn_air_compressor:
       friendly_name: Air compressor
       icon: mdi:engine
+# master bedroom
     sensor.bedroom_master_humidity:
       friendly_name: Humidity
     sensor.bedroom_master_temperature:

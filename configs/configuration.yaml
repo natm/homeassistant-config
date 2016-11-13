@@ -43,6 +43,9 @@ sensor:
      state_topic: roomsensors/bedroom-master/humidity/relative
    - platform: template
      sensors:
+       shed_door_template:
+         value_template: '{% if is_state("binary_sensor.shed_door", "on") %}closed{% else %}open{% endif %}'
+         friendly_name: 'Door'
        workshop_door_left_template:
          value_template: '{% if is_state("binary_sensor.workshop_door_left", "on") %}closed{% else %}open{% endif %}'
          friendly_name: 'Workshop door left'
@@ -286,7 +289,7 @@ group:
         - camera.Workshop_1
         - camera.Shed_1
         - camera.Woods_1
-    shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, binary_sensor.shed_door, camera.shed_1, sensor.pirelay1_version
+    shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, sensor.shed_door_template, camera.shed_1, sensor.pirelay1_version
     barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor, camera.barn_1, camera.barn_2, sensor.pirelay2_version, binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
     workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, camera.workshop_1, binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch, sensor.workshop_door_left_template, sensor.workshop_door_right_template
     test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
