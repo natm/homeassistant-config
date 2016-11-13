@@ -271,6 +271,20 @@ binary_sensor:
     sensor_class: opening
 
 group:
+    # views
+    default_view:
+      view: yes
+      entities:
+        - group.bedroom_master
+        - group.shed
+        - group.barn
+        - group.workshop
+        - group.internet
+    indoors:
+      name: Indoors
+      view: yes
+      entities:
+        - group.bedroom_master
     outdoors:
       name: Outdoors
       view: yes
@@ -289,6 +303,12 @@ group:
         - camera.Workshop_1
         - camera.Shed_1
         - camera.Woods_1
+    development:
+      name: Dev
+      view: yes
+      entities:
+        - group.test
+    # groups
     shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, sensor.shed_door_template, camera.shed_1, sensor.pirelay1_version
     barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor, camera.barn_1, camera.barn_2, sensor.pirelay2_version, binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
     workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, camera.workshop_1, binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch, sensor.workshop_door_left_template, sensor.workshop_door_right_template

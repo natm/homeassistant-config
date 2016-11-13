@@ -14,14 +14,42 @@
     light.shed_fluorescent_light_1:
       friendly_name: Inside light
 # workshop
+    light.workshop_indoor_lights:
+      friendly_name: Inside lights
+    light.workshop_outdoor_flood:
+      friendly_name: Outdoor flood
+    binary_sensor.workshop_inside_light_switch:
+      friendly_name: Inside light switch
+    binary_sensor.workshop_outdoor_light_switch:
+      friendly_name: Outdoor light switch
+    sensor.workshop_door_left_template:
+      friendly_name: Door left
+      icon: mdi:glassdoor
+    sensor.workshop_door_right_template:
+      friendly_name: Door right
+      icon: mdi:glassdoor
     binary_sensor.workshop_door_left:
       hidden: true
     binary_sensor.workshop_door_right:
       hidden: true
 # barn
+    binary_sensor.barn_inside_switch_1:
+      friendly_name: Light switch 1
+    binary_sensor.barn_inside_switch_2:
+      friendly_name: Light switch 2
+    binary_sensor.barn_inside_switch_3:
+      friendly_name: Light switch 3
+    binary_sensor.barn_inside_switch_4:
+      friendly_name: Light switch 4
     light.barn_air_compressor:
       friendly_name: Air compressor
       icon: mdi:engine
+    light.barn_lower_storage_lights:
+      friendly_name: Left storage lights
+    light.barn_slide_fluorescent:
+      friendly_name: Right side light
+    light.barn_xmas_lights_1:
+      friendly_name: Christmas lights
 # master bedroom
     sensor.bedroom_master_humidity:
       friendly_name: Humidity
