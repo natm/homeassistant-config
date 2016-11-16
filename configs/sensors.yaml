@@ -42,3 +42,27 @@
     workshop_door_right_template:
       value_template: '{% if is_state("binary_sensor.workshop_door_right", "on") %}closed{% else %}open{% endif %}'
       friendly_name: 'Workshop door right'
+- platform: mqtt
+  name: aaisp el6.a.1 sync down
+  unit_of_measurement: 'Mbit/s'
+  state_topic: aaisp/login/el6@a.1/syncrate/down/mb
+- platform: mqtt
+  name: aaisp el6.a.1 sync up
+  unit_of_measurement: 'Mbit/s'
+  state_topic: aaisp/login/el6@a.1/syncrate/up/mb
+- platform: mqtt
+  name: aaisp el6.a.2 sync down
+  unit_of_measurement: 'Mbit/s'
+  state_topic: aaisp/login/el6@a.2/syncrate/down/mb
+- platform: mqtt
+  name: aaisp el6.a.2 sync up
+  unit_of_measurement: 'Mbit/s'
+  state_topic: aaisp/login/el6@a.2/syncrate/up/mb
+- platform: mqtt
+  name: aaisp el6.a.1 quota remaining
+  unit_of_measurement: 'GB'
+  state_topic: aaisp/login/el6@a.1/quota/remaining/gb
+- platform: mqtt
+  name: aaisp el6.a.2 quota remaining
+  unit_of_measurement: 'GB'
+  state_topic: aaisp/login/el6@a.2/quota/remaining/gb
