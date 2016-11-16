@@ -56,6 +56,8 @@
     sensor.bedroom_master_temperature:
       friendly_name: Temperature
 # internet
+    sensor.wifi_clients:
+        icon: mdi:wifi
     sensor.aaisp_el6a1_quota_remaining:
         friendly_name: FTTC 1 Remaining quota
         icon: mdi:chart-pie
