@@ -38,4 +38,4 @@ New integrations:
 * Graphing DIN ammeters in shed and barn (need pulse counting)
 * MQTT temperature and humidity munin plugin (from roomsensors)
 * ~~Write a daemon to grab AAISP quota + sync rates and send it to MQTT~~ see: [aaisp-to-mqtt](https://github.com/natm/aaisp-to-mqtt)
-* ~~Display current down/upstream usage in mbit for each FTTC line~~
+* ~~Display current down/upstream usage in mbit for each FTTC line~~ [commit](https://github.com/natm/homeassistant-config/commit/e16f9f23cc5b0f457b8bbdffca04312fef566708)
