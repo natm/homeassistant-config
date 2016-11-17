@@ -6,7 +6,7 @@ Fixes:
 
 Automations:
 
-* Barn christmas lights should turn on automatically between mid November and Jan 6th each night
+* Barn Christmas lights should turn on automatically between mid November and Jan 6th each night
 * All outdoor lights switch off at 10pm, switch to override
 * Switch on shed inside light when the door opens
 * Notify if the workshop or shed doors are open after 9pm [source](https://github.com/dale3h/homeassistant-config-1/blob/master/automation/notify_garage_open_2100.yaml)
@@ -29,10 +29,11 @@ New integrations:
 * Amazon echo dot
 * Honeywell evohome
 * CurrentCost to MQTT via ESP8266-201
+* [Current transformer clamps](http://www.ebay.co.uk/itm/331978579185) on all exposed henley junctions - using [Open Energy monitor circuit](https://openenergymonitor.org/emon/buildingblocks/how-to-build-an-arduino-energy-monitor) with AT328 + ESP8266-201
 * Make owntracks work for both of us
 * Track locations of both vehicles
 * Send ODB2 data from cars to MQTT (HA+Munin)
-* Downstream current usage for neighbors
+* Downstream internet current usage for neighbors (SNMP from Edgerouter-X)
 * New daemon to archive CCTV JPEGs for timelapse to remote object store
 * Graphing DIN ammeters in shed and barn (need pulse counting)
 * MQTT temperature and humidity munin plugin (from roomsensors)
