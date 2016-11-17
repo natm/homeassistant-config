@@ -29,7 +29,7 @@ New integrations:
 * Amazon echo dot
 * Honeywell evohome
 * CurrentCost to MQTT via ESP8266-201
-* [Current transformer clamps](http://www.ebay.co.uk/itm/331978579185) on all exposed henley junctions - using [Open Energy monitor circuit](https://openenergymonitor.org/emon/buildingblocks/how-to-build-an-arduino-energy-monitor) with AT328 + ESP8266-201
+* [Current transformers](http://www.ebay.co.uk/itm/331978579185) on all henley blocks - using [OpenEnergyMonitor circuit](https://openenergymonitor.org/emon/buildingblocks/how-to-build-an-arduino-energy-monitor) with AT328 + ESP8266-201
 * Make owntracks work for both of us
 * Track locations of both vehicles
 * Send ODB2 data from cars to MQTT (HA+Munin)
