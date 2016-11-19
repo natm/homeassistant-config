@@ -12,6 +12,7 @@ indoors:
   view: yes
   entities:
     - group.bedroom_master
+    - group.heating
 outdoors:
   name: Outdoors
   view: yes
@@ -48,3 +49,17 @@ bedroom_master:
   entities:
     - sensor.bedroom_master_humidity
     - sensor.bedroom_master_temperature
+heating:
+  name: Heating
+  entities:
+    - sensor.heating_hot_water_temperature
+    - sensor.heating_zone_guest_bed_1_setpoint
+    - sensor.heating_zone_guest_bed_1_temperature
+    - sensor.heating_zone_house_setpoint
+    - sensor.heating_zone_house_temperature
+    - sensor.heating_zone_master_bed_setpoint
+    - sensor.heating_zone_master_bed_temperature
+    - sensor.heating_zone_nursery_setpoint
+    - sensor.heating_zone_nursery_temperature
+    - sensor.heating_zone_office_setpoint
+    - sensor.heating_zone_office_temperature

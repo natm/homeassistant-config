@@ -66,3 +66,48 @@
   name: aaisp el6.a.2 quota remaining
   unit_of_measurement: 'GB'
   state_topic: aaisp/login/el6@a.2/quota/remaining/gb
+# evohome
+- platform: mqtt
+  name: heating zone house setpoint
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/house/setpoint
+- platform: mqtt
+  name: heating zone house temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/house/temperature
+- platform: mqtt
+  name: heating zone office setpoint
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/office/setpoint
+- platform: mqtt
+  name: heating zone office temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/office/temperature
+- platform: mqtt
+  name: heating zone nursery setpoint
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/nursery/setpoint
+- platform: mqtt
+  name: heating zone nursery temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/nursery/temperature
+- platform: mqtt
+  name: heating zone master bed setpoint
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/master_bed/setpoint
+- platform: mqtt
+  name: heating zone master bed temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/master_bed/temperature
+- platform: mqtt
+  name: heating zone guest bed 1 setpoint
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/guest_bed_1/setpoint
+- platform: mqtt
+  name: heating zone guest bed 1 temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/zone/guest_bed_1/temperature
+- platform: mqtt
+  name: heating hot water temperature
+  unit_of_measurement: '°C'
+  state_topic: evohome/hotwater/temperature
