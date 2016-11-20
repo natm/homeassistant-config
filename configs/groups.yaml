@@ -63,3 +63,7 @@ heating:
     - sensor.heating_zone_nursery_temperature
     - sensor.heating_zone_office_setpoint
     - sensor.heating_zone_office_temperature
+electricity:
+  name: Electricity
+  entities:
+    - sensor.currentcost_power

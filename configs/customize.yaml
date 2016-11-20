@@ -76,3 +76,7 @@
     sensor.aaisp_el6a2_sync_up:
         friendly_name: FTTC 2 Sync up
         icon: mdi:arrow-up-bold
+# Electricity
+    sensor.currentcost_power:
+        friendly_name: Supply
+        icon: mdi:flash

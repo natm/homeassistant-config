@@ -111,3 +111,8 @@
   name: heating hot water temperature
   unit_of_measurement: '°C'
   state_topic: evohome/hotwater/temperature
+# power usage
+- platform: mqtt
+  name: currentcost power
+  unit_of_measurement: 'watts'
+  state_topic: currentcost/currentcost/ch1/watts
