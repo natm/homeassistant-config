@@ -212,3 +212,24 @@
    action:
     - service: light.turn_on
       entity_id: light.workshop_indoor_lights
+# christmas lights on at night
+- alias: barn xmas lights on at 4pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 16
+    minutes: 0
+    seconds: 0
+  action:
+   - service: light.turn_on
+     entity_id: light.barn_xmas_lights_1
+- alias: barn xmas lights off at 9pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 21
+    minutes: 0
+    seconds: 0
+  action:
+   - service: light.turn_off
+     entity_id: light.barn_xmas_lights_1
