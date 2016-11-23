@@ -6,11 +6,11 @@ Fixes:
 
 Automations:
 
-* Barn Christmas lights should turn on automatically between mid November and Jan 6th each night
 * All outdoor lights switch off at 10pm, switch to override
 * Switch on shed inside light when the door opens
 * Notify if the workshop or shed doors are open after 9pm [source](https://github.com/dale3h/homeassistant-config-1/blob/master/automation/notify_garage_open_2100.yaml)
 * Notify if any doors are open for over 10 minutes [source](https://github.com/dale3h/homeassistant-config-1/blob/master/automation/notify_doors_left_open.yaml)
+* ~~Barn Christmas lights should turn on automatically between mid November and Jan 6th each night~~ [commit]https://github.com/natm/homeassistant-config/commit/9882f46f6a4bbb019cee2fed34506e198c611be7
 
 Notifications:
 
