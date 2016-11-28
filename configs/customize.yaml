@@ -80,3 +80,13 @@
     sensor.currentcost_power:
         friendly_name: Supply
         icon: mdi:flash
+# Telephones
+    sensor.phone_last_incoming_call:
+        friendly_name: Incoming
+        icon: mdi:phone
+    sensor.phone_last_rejected_call:
+        friendly_name: Rejected
+        icon: mdi:phone
+    sensor.phone_last_outgoing_call:
+        friendly_name: Outgoing
+        icon: mdi:phone

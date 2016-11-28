@@ -116,3 +116,16 @@
   name: currentcost power
   unit_of_measurement: 'watts'
   state_topic: currentcost/currentcost/ch1/watts
+# phones
+- platform: mqtt
+  name: phone last incoming call
+  state_topic: phonecalls/home/incoming/prefilter
+  value_template: '{{ value_json.from_display }} @ {{ value_json.when }}'
+- platform: mqtt
+  name: phone last rejected call
+  state_topic: phonecalls/home/incoming/rejected
+  value_template: '{{ value_json.from_display }} @ {{ value_json.when }}'
+- platform: mqtt
+  name: phone last outgoing call
+  state_topic: phonecalls/home/outgoing/dialing
+  value_template: '{{ value_json.to_display }} @ {{ value_json.when }}'

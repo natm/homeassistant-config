@@ -67,3 +67,9 @@ electricity:
   name: Electricity
   entities:
     - sensor.currentcost_power
+phones:
+  name: Telephones
+  entities:
+    - sensor.phone_last_incoming_call
+    - sensor.phone_last_rejected_call
+    - sensor.phone_last_outgoing_call
