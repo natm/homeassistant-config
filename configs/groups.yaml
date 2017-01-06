@@ -1,7 +1,11 @@
 # views
-#default_view:
-#  view: yes
-#  entities:
+default_view:
+  view: yes
+  entities:
+     - group.climate
+     - group.electricity
+     - group.phones
+     - group.quick_scenes
 #    - group.bedroom_master
 #    - group.shed
 #    - group.barn
@@ -12,7 +16,7 @@ indoors:
   view: yes
   entities:
     - group.bedroom_master
-    - group.heating
+    - group.climate
 outdoors:
   name: Outdoors
   view: yes
@@ -37,6 +41,9 @@ development:
   entities:
     - group.relay_boards
     - group.test
+    - group.location
+    - group.weather
+    - group.internet
 # groups
 shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, sensor.shed_door_template
 barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor, binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
@@ -49,20 +56,10 @@ bedroom_master:
   entities:
     - sensor.bedroom_master_humidity
     - sensor.bedroom_master_temperature
-heating:
-  name: Heating
+quick_scenes:
+  name: Quick Scenes
   entities:
-    - sensor.heating_hot_water_temperature
-    - sensor.heating_zone_guest_bed_1_setpoint
-    - sensor.heating_zone_guest_bed_1_temperature
-    - sensor.heating_zone_house_setpoint
-    - sensor.heating_zone_house_temperature
-    - sensor.heating_zone_master_bed_setpoint
-    - sensor.heating_zone_master_bed_temperature
-    - sensor.heating_zone_nursery_setpoint
-    - sensor.heating_zone_nursery_temperature
-    - sensor.heating_zone_office_setpoint
-    - sensor.heating_zone_office_temperature
+    - scene.all_outdoor_lights_off
 electricity:
   name: Electricity
   entities:
@@ -73,3 +70,23 @@ phones:
     - sensor.phone_last_incoming_call
     - sensor.phone_last_rejected_call
     - sensor.phone_last_outgoing_call
+weather:
+  name: Weather
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+location:
+  name: location
+  entities:
+    - device_tracker.nat6p_nat6p
+    - device_tracker.natnexus6p_natnexua6p
+    - device_tracker.natnexus6p_natnexus6p
+climate:
+  name: Climate
+  entities:
+    - climate.guest_bed_1
+    - climate.hot_water
+    - climate.house
+    - climate.master_bed
+    - climate.nursery
+    - climate.office
