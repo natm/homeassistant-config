@@ -90,3 +90,6 @@
     sensor.phone_last_outgoing_call:
         friendly_name: Outgoing
         icon: mdi:phone
+
+    group.heating:
+        hidden: true
