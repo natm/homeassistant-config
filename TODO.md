@@ -2,6 +2,7 @@
 
 Fixes:
 
+* office door sensor
 * power monitoring
 * Shed door contact reporting
 
