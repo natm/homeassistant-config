@@ -2,6 +2,7 @@
 
 Fixes:
 
+* power monitoring
 * Shed door contact reporting
 
 Automations:
@@ -14,7 +15,11 @@ Automations:
 
 Notifications:
 
-* Work out which push service to use for our Android phones
+* add home slack to our phones
+* ~~notify on incoming and outgoing calls to slack~~
+* notify when workshop doors open and close
+* notify when shed doors open and close
+* include cctv captures in workshop and shed slack messages
 
 Security:
 
@@ -22,7 +27,7 @@ Security:
 
 Improvements:
 
-* Clean up default_view
+* ~~Clean up default_view~~
 
 New integrations:
 
