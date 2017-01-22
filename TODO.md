@@ -33,6 +33,7 @@ Improvements:
 
 New integrations:
 
+* https://home-assistant.io/components/sensor.google_travel_time/
 * Amazon echo dot
 * [Current transformers](http://www.ebay.co.uk/itm/331978579185) on all henley blocks - using [OpenEnergyMonitor circuit](https://openenergymonitor.org/emon/buildingblocks/how-to-build-an-arduino-energy-monitor) with AT328 + ESP8266-201
 * Make owntracks work for both of us
