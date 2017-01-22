@@ -214,7 +214,7 @@
       entity_id: light.workshop_indoor_lights
     - service: notify.slackbot
       data:
-        message: "Workshop door opened"
+        message: ":door: Workshop door opened"
 # christmas lights on at night
 - alias: barn xmas lights on at 4pm
   hide_entity: True
