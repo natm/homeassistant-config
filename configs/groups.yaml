@@ -60,6 +60,7 @@ quick_scenes:
   name: Quick Scenes
   entities:
     - scene.all_outdoor_lights_off
+    - scene.outdoor_front_at_night
 electricity:
   name: Electricity
   entities:
