@@ -236,3 +236,22 @@
   action:
    - service: light.turn_off
      entity_id: light.barn_xmas_lights_1
+# notify slack on incoming calls
+- alias: Notify incoming calls
+  hide_entity: True
+  trigger:
+    platform: mqtt
+    topic: phonecalls/home/incoming/prefilter
+  action:
+    - service: notify.slackbot
+      data_template:
+        message: ":phone: Incoming phone call from {{ trigger.payload_json.from_display }} to {{ trigger.payload_json.to_display }}"
+- alias: Notify incoming calls
+  hide_entity: True
+  trigger:
+    platform: mqtt
+    topic: phonecalls/home/outgoing/dialing
+  action:
+    - service: notify.slackbot
+      data_template:
+        message: ":phone: Outgoing phone call to {{ trigger.payload_json.to_display }}"
