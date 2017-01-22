@@ -4,6 +4,7 @@ Fixes:
 
 * office door sensor
 * power monitoring
+* power should set a persistant value
 * Shed door contact reporting
 
 Automations:
