@@ -138,6 +138,9 @@
    action:
     - service: light.turn_off
       entity_id: light.shed_fluorescent_light_1
+    - service: notify.slackbot
+      data:
+        message: ":bulb: Shed lights switched off"
 
 -  alias: test lights on
    hide_entity: True
@@ -215,6 +218,9 @@
    action:
     - service: light.turn_on
       entity_id: light.workshop_indoor_lights
+    - service: notify.slackbot
+      data:
+        message: ":bulb: Workshop indoor lights switched on automatically"
 - alias: notify workshop door right opened
   hide_entity: True
   trigger:
@@ -260,6 +266,47 @@
     data:
       message: ":door: Workshop left hand door closed"
 
+# shed door
+- alias: notify shed door opened
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.shed_door
+   from: 'on'
+   to: 'off'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Shed door opened"
+- alias: notify shed door closed
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.shed_door
+   from: 'off'
+   to: 'on'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Shed door closed"
+
+-  alias: shed lights on when door opens
+   hide_entity: True
+   trigger:
+     platform: state
+     entity_id: binary_sensor.shed_door
+     from: 'on'
+     to: 'off'
+   condition:
+      condition: state
+      entity_id: light.shed_fluorescent_light_1
+      state: 'off'
+   action:
+    - service: light.turn_on
+      entity_id: light.shed_fluorescent_light_1
+    - service: notify.slackbot
+      data:
+        message: ":bulb: Shed lights switched on automatically"
 
 # christmas lights on at night
 - alias: barn xmas lights on at 4pm

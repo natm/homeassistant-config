@@ -1,6 +1,6 @@
 - platform: mqtt
   name: "shed door"
-  state_topic: "pirelay1/doorcontact1"
+  state_topic: "pirelay1/doorcontact2"
   payload_on: "ON"
   payload_off: "OFF"
   sensor_class: opening
