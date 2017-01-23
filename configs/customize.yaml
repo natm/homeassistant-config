@@ -50,6 +50,12 @@
       friendly_name: Right side light
     light.barn_xmas_lights_1:
       friendly_name: Christmas lights
+# office
+    binary_sensor.office_door:
+      hidden: true
+    sensor.office_door_template:
+      friendly_name: Door
+      icon: mdi:glassdoor
 # master bedroom
     sensor.bedroom_master_humidity:
       friendly_name: Humidity

@@ -42,6 +42,9 @@
     workshop_door_right_template:
       value_template: '{% if is_state("binary_sensor.workshop_door_right", "on") %}closed{% else %}open{% endif %}'
       friendly_name: 'Workshop door right'
+    office_door_template:
+      value_template: '{% if is_state("binary_sensor.office_door", "on") %}closed{% else %}open{% endif %}'
+      friendly_name: 'Office door right'
 - platform: mqtt
   name: aaisp el6.a.1 sync down
   unit_of_measurement: 'Mbit/s'

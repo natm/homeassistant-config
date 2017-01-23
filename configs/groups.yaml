@@ -17,6 +17,7 @@ indoors:
   entities:
     - group.bedroom_master
     - group.climate
+    - group.office
 outdoors:
   name: Outdoors
   view: yes
@@ -56,6 +57,10 @@ bedroom_master:
   entities:
     - sensor.bedroom_master_humidity
     - sensor.bedroom_master_temperature
+office:
+  name: Office
+  entities:
+    - sensor.office_door_template
 quick_scenes:
   name: Quick Scenes
   entities:

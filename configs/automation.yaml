@@ -307,6 +307,29 @@
     - service: notify.slackbot
       data:
         message: ":bulb: Shed lights switched on automatically"
+# office
+- alias: notify office door opened
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.office_door
+   from: 'on'
+   to: 'off'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Office door opened"
+- alias: notify office door closed
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.office_door
+   from: 'off'
+   to: 'on'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Office door closed"
 
 # christmas lights on at night
 - alias: barn xmas lights on at 4pm

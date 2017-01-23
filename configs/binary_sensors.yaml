@@ -68,7 +68,7 @@
   payload_off: "OFF"
 
 - platform: mqtt
-  name: "test door 1"
+  name: "Office door"
   state_topic: "pirelay3/doorcontact2"
   payload_on: "ON"
   payload_off: "OFF"
