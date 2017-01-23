@@ -4,7 +4,7 @@ Our [Home Assistant](https://home-assistant.io/) configuration files.
 
 Lots of integration and automation still required - [todo list](TODO.md).
 
-Tested against version 0.32.3
+Tested against version 0.35.3
 
 ## Deployment
 
