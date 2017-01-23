@@ -198,6 +198,9 @@
    action:
     - service: light.turn_off
       entity_id: light.workshop_indoor_lights
+    - service: notify.slackbot
+      data:
+        message: ":bulb: Workshop lights switched off"
 -  alias: workshop lights on when door opens
    hide_entity: True
    trigger:
