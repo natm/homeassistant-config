@@ -212,9 +212,52 @@
    action:
     - service: light.turn_on
       entity_id: light.workshop_indoor_lights
-    - service: notify.slackbot
-      data:
-        message: ":door: Workshop door opened"
+- alias: notify workshop door right opened
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.workshop_door_right
+   from: 'on'
+   to: 'off'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Workshop right hand door opened"
+- alias: noitfy workshop door left opened
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.workshop_door_left
+   from: 'on'
+   to: 'off'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Workshop left hand door opened"
+- alias: notify workshop door right closed
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.workshop_door_right
+   from: 'off'
+   to: 'on'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Workshop right hand door closed"
+- alias: noitfy workshop door left closed
+  hide_entity: True
+  trigger:
+   platform: state
+   entity_id: binary_sensor.workshop_door_left
+   from: 'off'
+   to: 'on'
+  action:
+  - service: notify.slackbot
+    data:
+      message: ":door: Workshop left hand door closed"
+
+
 # christmas lights on at night
 - alias: barn xmas lights on at 4pm
   hide_entity: True
