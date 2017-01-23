@@ -84,6 +84,10 @@
   name: phone last outgoing call
   state_topic: phonecalls/home/outgoing/dialing
   value_template: '{{ value_json.to_display }} @ {{ value_json.when }}'
+# time date
+- platform: time_date
+  display_options:
+    - "date_time"
 # weather
 - platform: darksky
   api_key: !secret darksky_api_key
