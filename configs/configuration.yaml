@@ -41,10 +41,6 @@ automation: !include automation.yaml
 scene: !include scenes.yaml
 
 notify:
-  - name: pushover
-    platform: pushover
-    api_key: !secret pushover_api_key
-    user_key: !secret pushover_user_key
   - name: slackbot
     platform: slack
     api_key: !secret slackbot_ha_api_key
