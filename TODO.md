@@ -7,6 +7,13 @@ Fixes:
 * power shouldn't set a persistant value
 * ~~Shed door contact reporting~~
 
+Containerization:
+
+* Home Assistant
+ * remove old install and boot files
+ * fix up ansible
+* AAISP MQTT service
+
 Automations:
 
 * All outdoor lights switch off at 10pm, switch to override
