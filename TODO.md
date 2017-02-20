@@ -13,6 +13,10 @@ Containerization:
  * remove old install and boot files
  * fix up ansible
 * AAISP MQTT service
+ * docker hub
+ * travis
+ * coveralls
+ * scruitinizer
 
 Automations:
 
