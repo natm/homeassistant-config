@@ -3,8 +3,8 @@
 Fixes:
 
 * ~~office door sensor~~
-* power monitoring
-* power should set a persistant value
+* power monitoring - fix battery
+* power shouldn't set a persistant value
 * ~~Shed door contact reporting~~
 
 Automations:
@@ -17,7 +17,7 @@ Automations:
 
 Notifications:
 
-* add home slack to our phones
+* ~~add home slack to our phones~~
 * ~~notify on incoming and outgoing calls to slack~~
 * ~~notify when workshop doors open and close~~
 * ~~notify when shed doors open and close~~
@@ -26,6 +26,7 @@ Notifications:
 Security:
 
 * Alerting if outdoor doors open at night
+* Post CCTV GIFs to slack when doors open
 
 Improvements:
 
