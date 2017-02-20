@@ -17,6 +17,10 @@ Containerization:
  * travis
  * coveralls
  * scruitinizer
+* Home phones
+ * docker hub
+ * coveralls
+ * scruitinizer
 
 Automations:
 
