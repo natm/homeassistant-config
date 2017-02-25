@@ -12,6 +12,8 @@
     mode=0644
   with_fileglob:
     - ../../configs/*.yaml
+  notify:
+    - restart home assistant
 - name: Copy secrets.yaml
   copy:
     src=../../../homeassistant-config-secrets/secrets.yaml
@@ -19,3 +21,5 @@
     owner=root
     group=root
     mode=0644
+  notify:
+    - restart home assistant

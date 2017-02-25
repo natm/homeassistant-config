@@ -7,6 +7,7 @@ homeassistant:
   time_zone: Europe/London
   customize: !include customize.yaml
 
+
 sensor: !include sensors.yaml
 
 mqtt:
