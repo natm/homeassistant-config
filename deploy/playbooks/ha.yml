@@ -5,5 +5,4 @@
   sudo: True
 
   roles:
-    - { role: homeassistant,              tags: ["homeassistant"] }
-    - { role: homeassistant-configs,      tags: ["homeassistant-configs"] }
+    - { role: homeassistant-configs,             tags: ["homeassistant-configs"] }

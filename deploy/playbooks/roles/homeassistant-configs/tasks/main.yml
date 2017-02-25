@@ -1,11 +1,21 @@
+- name: Create /etc/homeassistant/config
+  file:
+    path=/etc/homeassistant/config
+    state=directory
+    mode=0755
 - name: Copy config YAML files
   copy:
     src={{ item }}
-    dest=/var/opt/homeassistant
-    owner=hass
-    group=hass
+    dest=/etc/homeassistant/config
+    owner=root
+    group=root
     mode=0644
   with_fileglob:
     - ../../configs/*.yaml
-  notify:
-    - restart home assistant
+- name: Copy secrets.yaml
+  copy:
+    src=../../../homeassistant-config-secrets/secrets.yaml
+    dest=/etc/homeassistant/config/secrets.yaml
+    owner=root
+    group=root
+    mode=0644
