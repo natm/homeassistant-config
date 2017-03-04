@@ -46,3 +46,10 @@
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: basic
+
+- platform: generic
+  name: Nursery
+  still_image_url: http://cctvnvr1.gorras.hw.esgob.com/ISAPI/Streaming/channels/801/picture
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: basic
