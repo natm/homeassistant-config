@@ -1,3 +1,4 @@
+
 # views
 default_view:
   view: yes
@@ -36,6 +37,7 @@ cameras:
     - camera.Workshop_1
     - camera.Shed_1
     - camera.Woods_1
+    - camera.Nursery
 development:
   name: Dev
   view: yes
