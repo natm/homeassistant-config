@@ -29,4 +29,5 @@ ansible-playbook -i deploy/hosts deploy/playbooks/ha.yml
 
 ## Running Home Assistant in Docker
 
-`docker run -d --name homeassistant --rm -v /etc/homeassistant/config/:/config -v /etc/localtime:/etc/localtime:ro -p 127.0.0.1:8123:8123 homeassistant/home-assistant`
+`docker run --restart=always --name homeassistant -d -v /etc/homeassistant/config/:/config -v /etc/localtime:/etc/localtime:ro -p 127.0.0.1:8123:8123 
+homeassistant/home-assistant`
