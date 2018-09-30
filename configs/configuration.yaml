@@ -6,6 +6,21 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/London
   customize: !include customize.yaml
+  auth_providers:
+   - type: homeassistant
+   - type: trusted_networks
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
+  trusted_networks:
+    - 127.0.0.1
+    - ::1
+    - 193.47.147.0/24
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
 
 
 sensor: !include sensors.yaml
@@ -51,3 +66,8 @@ climate:
   platform: honeywell
   username: !secret evohome_username
   password: !secret evohome_password
+
+switch:
+  - name: Hair Straightners
+    platform: tplink
+    host: 193.47.147.208

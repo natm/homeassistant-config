@@ -3,10 +3,11 @@
 default_view:
   view: yes
   entities:
-     - group.climate
-     - group.electricity
-     - group.phones
+     - group.shed
+     - group.barn
+     - group.workshop
      - group.quick_scenes
+     - switch.hair_straightners
 #    - group.bedroom_master
 #    - group.shed
 #    - group.barn
@@ -47,10 +48,16 @@ development:
     - group.location
     - group.weather
     - group.internet
+    - group.climate
+    - group.electricity
+    - group.phones
 # groups
-shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, binary_sensor.shed_inside_light_switch, sensor.shed_door_template
-barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor, binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
-workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch, sensor.workshop_door_left_template, sensor.workshop_door_right_template
+shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, sensor.shed_door_template
+# shed disabled: binary_sensor.shed_inside_light_switch
+barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor
+# barn disabled: binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
+workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, sensor.workshop_door_left_template, sensor.workshop_door_right_template
+# workshop disabled: binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch,
 test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
 relay_boards: sensor.pirelay1_version, sensor.pirelay2_version, sensor.pirelay3_version
 internet: sensor.wifi_clients, sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fastcom_download, sensor.aaisp_el6a1_quota_remaining, sensor.aaisp_el6a2_quota_remaining, sensor.aaisp_el6a1_sync_down, sensor.aaisp_el6a1_sync_up, sensor.aaisp_el6a2_sync_down, sensor.aaisp_el6a2_sync_up
