@@ -4,6 +4,7 @@
   - ping
   - download
   - upload
+  server_id: 16607
 - platform: fastdotcom
   minute:
   - 12
