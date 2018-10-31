@@ -92,6 +92,13 @@
 - platform: time_date
   display_options:
     - "date_time"
+# seth bedroom
+- platform: mqtt
+  name: sethbed version
+  state_topic: "tractorbed/seth/version"
+- platform: mqtt
+  name: sethbed uptime
+  state_topic: "tractorbed/seth/uptime"
 # weather
 - platform: darksky
   api_key: !secret darksky_api_key

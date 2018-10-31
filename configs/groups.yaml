@@ -51,6 +51,7 @@ development:
     - group.climate
     - group.electricity
     - group.phones
+    - group.sethbed
 # groups
 shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, sensor.shed_door_template
 # shed disabled: binary_sensor.shed_inside_light_switch
@@ -105,3 +106,8 @@ climate:
     - climate.master_bed
     - climate.nursery
     - climate.office
+sethbed:
+  name: Seth bed
+  entities:
+    - sensor.sethbed_uptime
+    - sensor.sethbed_version
