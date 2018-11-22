@@ -63,10 +63,10 @@ notify:
     api_key: !secret slackbot_ha_api_key
     default_channel: '#general'
 
-climate:
-  platform: honeywell
-  username: !secret evohome_username
-  password: !secret evohome_password
+# climate:
+#  platform: honeywell
+#  username: !secret evohome_username
+#  password: !secret evohome_password
 
 switch:
   - name: Hair Straightners

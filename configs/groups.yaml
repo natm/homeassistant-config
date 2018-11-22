@@ -18,7 +18,7 @@ indoors:
   view: yes
   entities:
     - group.bedroom_master
-    - group.climate
+#    - group.climate
     - group.office
 outdoors:
   name: Outdoors
@@ -48,7 +48,7 @@ development:
     - group.location
     - group.weather
     - group.internet
-    - group.climate
+#    - group.climate
     - group.electricity
     - group.phones
     - group.sethbed
@@ -97,15 +97,15 @@ location:
     - device_tracker.nat6p_nat6p
     - device_tracker.natnexus6p_natnexua6p
     - device_tracker.natnexus6p_natnexus6p
-climate:
-  name: Climate
-  entities:
-    - climate.guest_bed_1
-    - climate.hot_water
-    - climate.house
-    - climate.master_bed
-    - climate.nursery
-    - climate.office
+#climate:
+#  name: Climate
+#  entities:
+#    - climate.guest_bed_1
+#    - climate.hot_water
+#    - climate.house
+#    - climate.master_bed
+#    - climate.nursery
+#    - climate.office
 sethbed:
   name: Seth bed
   entities:

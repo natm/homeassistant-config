@@ -97,5 +97,5 @@
         friendly_name: Outgoing
         icon: mdi:phone
 
-    group.heating:
-        hidden: true
+#    group.heating:
+#        hidden: true
