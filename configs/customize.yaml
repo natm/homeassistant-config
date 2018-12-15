@@ -61,27 +61,6 @@
       friendly_name: Humidity
     sensor.bedroom_master_temperature:
       friendly_name: Temperature
-# internet
-    sensor.wifi_clients:
-        icon: mdi:wifi
-    sensor.aaisp_el6a1_quota_remaining:
-        friendly_name: FTTC 1 Remaining quota
-        icon: mdi:chart-pie
-    sensor.aaisp_el6a1_sync_down:
-        friendly_name: FTTC 1 Sync down
-        icon: mdi:arrow-down-bold
-    sensor.aaisp_el6a1_sync_up:
-        friendly_name: FTTC 1 Sync up
-        icon: mdi:arrow-up-bold
-    sensor.aaisp_el6a2_quota_remaining:
-        friendly_name: FTTC 2 Remaining quota
-        icon: mdi:chart-pie
-    sensor.aaisp_el6a2_sync_down:
-        friendly_name: FTTC 2 Sync down
-        icon: mdi:arrow-down-bold
-    sensor.aaisp_el6a2_sync_up:
-        friendly_name: FTTC 2 Sync up
-        icon: mdi:arrow-up-bold
 # Electricity
     sensor.currentcost_power:
         friendly_name: Supply
