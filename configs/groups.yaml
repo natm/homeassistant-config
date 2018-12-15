@@ -3,12 +3,12 @@
 default_view:
   view: yes
   entities:
+     - group.heating
+     - group.miscitems
      - group.shed
      - group.barn
      - group.workshop
      - group.quick_scenes
-     - group.heating
-     - switch.hair_straightners
 #    - group.bedroom_master
 #    - group.shed
 #    - group.barn
@@ -115,4 +115,12 @@ sethbed:
 heating:
   name: Heating
   entities:
-    - sensor.heating_hot_water
+    - switch.heating_hot_water
+    - switch.heating_central_heating
+miscitems:
+  name: Various items
+  entities:
+     - switch.bridge_lights
+     - switch.hair_straightners
+     - switch.lounge_lamp
+     - switch.temp1

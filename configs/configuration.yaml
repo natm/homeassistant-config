@@ -68,7 +68,4 @@ notify:
 #  username: !secret evohome_username
 #  password: !secret evohome_password
 
-switch:
-  - name: Hair Straightners
-    platform: tplink
-    host: 193.47.147.208
+switch: !include switches.yaml

@@ -2,7 +2,7 @@
     binary_sensor.shed_door:
       hidden: true
     sensor.shed_door_template:
-      icon: mdi:glassdoor
+      icon: mdi:door
     binary_sensor.shed_inside_light_switch:
       friendly_name: Light switch
     light.shed_led_flood_light_front:
@@ -24,10 +24,10 @@
       friendly_name: Outdoor light switch
     sensor.workshop_door_left_template:
       friendly_name: Door left
-      icon: mdi:glassdoor
+      icon: mdi:door
     sensor.workshop_door_right_template:
       friendly_name: Door right
-      icon: mdi:glassdoor
+      icon: mdi:door
     binary_sensor.workshop_door_left:
       hidden: true
     binary_sensor.workshop_door_right:
@@ -96,6 +96,24 @@
     sensor.phone_last_outgoing_call:
         friendly_name: Outgoing
         icon: mdi:phone
+# heating
+    switch.heating_hot_water:
+        friendly_name: Hot water
+        icon: mdi:water-pump
+    switch.heating_central_heating:
+        friendly_name: Central heating
+        icon: mdi:radiator
+
+# misc items
+    switch.bridge_lights:
+        friendly_name: Bridge lights
+        icon: mdi:bridge
+    switch.lounge_lamp:
+        friendly_name: Lounge lamp
+        icon: mdi:lamp
+    switch.temp1:
+        friendly_name: Christmas tree
+        icon: mdi:pine-tree
 
 #    group.heating:
 #        hidden: true

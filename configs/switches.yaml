@@ -1,0 +1,31 @@
+- platform: tplink
+  host: 193.47.147.208
+  name: Hair Straightners
+
+- platform: tplink
+  host: 193.47.147.211
+  name: Bridge lights
+
+- platform: tplink
+  host: 193.47.147.215
+  name: Lounge lamp
+
+- platform: tplink
+  host: 193.47.147.213
+  name: Temp1
+
+- platform: mqtt
+  name: "Heating hot water"
+  state_topic: "stat/hotwater/POWER"
+  command_topic: "cmnd/hotwater/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Heating central heating"
+  state_topic: "stat/centralheating/POWER"
+  command_topic: "cmnd/centralheating/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
