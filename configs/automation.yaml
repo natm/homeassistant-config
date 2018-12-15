@@ -350,3 +350,106 @@
     - service: notify.slackbot
       data_template:
         message: ":phone: Outgoing phone call to {{ trigger.payload_json.to_display }}"
+
+# heating - hot water
+- alias: hot water on at 6am
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 6
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_on
+     entity_id: switch.heating_hot_water
+- alias: hot water off at 7am
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 7
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_off
+     entity_id: switch.heating_hot_water
+- alias: hot water on at 6pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 18
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_on
+     entity_id: switch.heating_hot_water
+- alias: hot water off at 7pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 19
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_off
+     entity_id: switch.heating_hot_water
+# heating - central heating
+- alias: heating on at 5am
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 5
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_on
+     entity_id: switch.heating_central_heating
+- alias: heating off at 8am
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 8
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_off
+     entity_id: switch.heating_central_heating
+- alias: heating on at 11am
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 11
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_on
+     entity_id: switch.heating_central_heating
+- alias: heating off at 1pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 13
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_off
+     entity_id: switch.heating_central_heating
+- alias: heating on at 4pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 16
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_on
+     entity_id: switch.heating_central_heating
+- alias: heating off at 10pm
+  hide_entity: True
+  trigger:
+    platform: time
+    hours: 22
+    minutes: 0
+    seconds: 0
+  action:
+   - service: switch.turn_off
+     entity_id: switch.heating_central_heating
