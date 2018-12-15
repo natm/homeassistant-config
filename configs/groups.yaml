@@ -7,6 +7,7 @@ default_view:
      - group.barn
      - group.workshop
      - group.quick_scenes
+     - group.heating
      - switch.hair_straightners
 #    - group.bedroom_master
 #    - group.shed
@@ -111,3 +112,7 @@ sethbed:
   entities:
     - sensor.sethbed_uptime
     - sensor.sethbed_version
+heating:
+  name: Heating
+  entities:
+    - sensor.heating_hot_water
