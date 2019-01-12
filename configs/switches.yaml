@@ -16,16 +16,16 @@
 
 - platform: mqtt
   name: "Heating hot water"
-  state_topic: "stat/hotwater/POWER"
-  command_topic: "cmnd/hotwater/POWER"
+  state_topic: "heating/stat/controller/POWER1"
+  command_topic: "heating/cmnd/controller/POWER2"
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
 
 - platform: mqtt
   name: "Heating central heating"
-  state_topic: "stat/centralheating/POWER"
-  command_topic: "cmnd/centralheating/POWER"
+  state_topic: "heating/stat/controller/POWER2"
+  command_topic: "heating/cmnd/controller/POWER2"
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
