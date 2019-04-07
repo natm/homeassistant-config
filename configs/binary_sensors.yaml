@@ -3,7 +3,6 @@
   state_topic: "pirelay1/doorcontact2"
   payload_on: "ON"
   payload_off: "OFF"
-  sensor_class: opening
 
 - platform: mqtt
   name: "Shed inside light switch"
@@ -52,14 +51,12 @@
   state_topic: "pirelay2/doorcontact1"
   payload_on: "ON"
   payload_off: "OFF"
-  hidden: True
 
 - platform: mqtt
   name: "Workshop door right"
   state_topic: "pirelay2/doorcontact2"
   payload_on: "ON"
   payload_off: "OFF"
-  hidden: True
 
 - platform: mqtt
   name: "test switch 1"
@@ -72,4 +69,3 @@
   state_topic: "pirelay3/doorcontact2"
   payload_on: "ON"
   payload_off: "OFF"
-  sensor_class: opening

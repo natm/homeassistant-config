@@ -8,7 +8,7 @@ homeassistant:
   customize: !include customize.yaml
   auth_providers:
    - type: homeassistant
-   - type: trusted_networks
+#   - type: trusted_networks
 
 http:
   use_x_forwarded_for: true
@@ -67,5 +67,26 @@ notify:
 #  platform: honeywell
 #  username: !secret evohome_username
 #  password: !secret evohome_password
+
+stream:
+
+tplink:
+  discovery: false
+  switch:
+    - host: 193.47.147.211
+    - host: 193.47.147.208
+    - host: 193.47.147.215
+    - host: 193.47.147.213
+
+fastdotcom:
+  scan_interval:
+      minutes: 30
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+  track_new_calendar: false
+
+system_health:
 
 switch: !include switches.yaml

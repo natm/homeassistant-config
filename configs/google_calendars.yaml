@@ -1,0 +1,17 @@
+- cal_id: nuqe.net_qvjupq0jbs5f7qccvuhtehiqqc@group.calendar.google.com
+  entities:
+  - device_id: everything
+    name: everything
+    track: true
+  - device_id: heating
+    name: heating
+    track: true
+    search: heating
+  - device_id: hotwater
+    name: hotwater
+    track: true
+    search: hot water
+  - device_id: bridgelights
+    name: bridgelights
+    track: true
+    search: bridge lights

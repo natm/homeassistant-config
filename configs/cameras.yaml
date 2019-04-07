@@ -1,16 +1,12 @@
 - platform: generic
   name: Drive 1
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/101/picture
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  still_image_url: !secret cctv_drive1_still
+  stream_source: !secret cctv_drive1_rtsp
 
 - platform: generic
   name: Drive 2
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/201/picture
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  still_image_url: !secret cctv_drive2_still
+  stream_source: !secret cctv_drive2_rtsp
 
 - platform: generic
   name: Barn 1
