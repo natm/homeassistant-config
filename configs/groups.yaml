@@ -128,9 +128,10 @@ heating:
 garden:
   name: Garden
   entities:
-    - switch.bridge_lights
+    - switch.bridge_spotlights
     - switch.patio_fountain
     - switch.patio_festoon
+    - switch.mega_festoon
     - switch.logstore_indoor
     - switch.logstore_porch
     - switch.logstore_outside

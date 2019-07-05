@@ -73,10 +73,10 @@ stream:
 tplink:
   discovery: false
   switch:
-    - host: 193.47.147.211
     - host: 193.47.147.208
-    - host: 193.47.147.215
     - host: 193.47.147.213
+    - host: 193.47.147.215
+    - host: 193.47.147.233
 
 fastdotcom:
   scan_interval:

@@ -92,15 +92,19 @@
         icon: mdi:pine-tree
 
 # garden
-    switch.bridge_lights:
+    switch.bridge_spotlights:
         friendly_name: Bridge lights
         icon: mdi:bridge
+    switch.mega_festoon:
+        friendly_name: Mega festoon
+        icon: mdi:lightbulb
     switch.patio_festoon:
         friendly_name: Patio festoon
-        icon: mdi:bridge
+        icon: mdi:lightbulb
     switch.patio_fountain:
         friendly_name: Patio fountain
         icon: mdi:fountain
+
 
 #    group.heating:
 #        hidden: true

@@ -54,3 +54,11 @@
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
+
+- platform: mqtt
+  name: "Bridge spotlights"
+  state_topic: "greenhouse/stat/controller/POWER1"
+  command_topic: "greenhouse/cmnd/controller/POWER1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
