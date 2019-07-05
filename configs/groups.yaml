@@ -4,11 +4,10 @@ default_view:
   view: yes
   entities:
      - group.heating
-     - group.miscitems
+     - group.garden
      - group.shed
      - group.barn
-     - group.workshop
-     - group.quick_scenes
+     - group.miscitems
 #    - group.bedroom_master
 #    - group.shed
 #    - group.barn
@@ -27,7 +26,6 @@ outdoors:
   entities:
     - group.shed
     - group.barn
-    - group.workshop
 cameras:
   name: Cameras
   view: yes
@@ -53,12 +51,22 @@ development:
     - group.electricity
     - group.phones
     - group.sethbed
+    - group.quick_scenes
 # groups
 shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, sensor.shed_door_template
 # shed disabled: binary_sensor.shed_inside_light_switch
-barn: light.barn_xmas_lights_1, light.barn_lower_storage_lights, light.barn_slide_fluorescent, light.barn_air_compressor
+barn:
+  name: Barn and workshop
+  entities:
+    - light.barn_festoon
+    - light.barn_lower_storage_lights
+    - light.barn_slide_fluorescent
+    - light.barn_air_compressor
+    - light.workshop_indoor_lights
+    - light.workshop_outdoor_flood
+    - sensor.workshop_door_left_template
+    - sensor.workshop_door_right_template
 # barn disabled: binary_sensor.barn_inside_switch_1, binary_sensor.barn_inside_switch_2, binary_sensor.barn_inside_switch_3, binary_sensor.barn_inside_switch_4
-workshop: light.workshop_indoor_lights, light.workshop_outdoor_flood, sensor.workshop_door_left_template, sensor.workshop_door_right_template
 # workshop disabled: binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch,
 test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
 relay_boards: sensor.pirelay1_version, sensor.pirelay2_version, sensor.pirelay3_version
@@ -117,10 +125,17 @@ heating:
   entities:
     - switch.heating_hot_water
     - switch.heating_central_heating
+garden:
+  name: Garden
+  entities:
+    - switch.bridge_lights
+    - switch.patio_fountain
+    - switch.patio_festoon
+    - switch.logstore_indoor
+    - switch.logstore_porch
+    - switch.logstore_outside
 miscitems:
   name: Various items
   entities:
-     - switch.bridge_lights
      - switch.hair_straightners
      - switch.lounge_lamp
-     - switch.temp1

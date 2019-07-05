@@ -35,7 +35,7 @@
   optimistic: false
 
 - platform: mqtt
-  name: "Barn xmas lights 1"
+  name: "Barn festoon"
   state_topic: "pirelay2/output5/status"
   command_topic: "pirelay2/output5/switch"
   qos: 0

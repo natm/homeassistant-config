@@ -48,8 +48,8 @@
       friendly_name: Left storage lights
     light.barn_slide_fluorescent:
       friendly_name: Right side light
-    light.barn_xmas_lights_1:
-      friendly_name: Christmas lights
+    light.barn_festoon:
+      friendly_name: Festoon
 # office
     binary_sensor.office_door:
       hidden: true
@@ -84,15 +84,23 @@
         icon: mdi:radiator
 
 # misc items
-    switch.bridge_lights:
-        friendly_name: Bridge lights
-        icon: mdi:bridge
     switch.lounge_lamp:
         friendly_name: Lounge lamp
         icon: mdi:lamp
     switch.temp1:
         friendly_name: Christmas tree
         icon: mdi:pine-tree
+
+# garden
+    switch.bridge_lights:
+        friendly_name: Bridge lights
+        icon: mdi:bridge
+    switch.patio_festoon:
+        friendly_name: Patio festoon
+        icon: mdi:bridge
+    switch.patio_fountain:
+        friendly_name: Patio fountain
+        icon: mdi:fountain
 
 #    group.heating:
 #        hidden: true

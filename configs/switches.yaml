@@ -13,3 +13,44 @@
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
+
+- platform: mqtt
+  name: "Patio fountain"
+  state_topic: "patio/stat/controller/POWER1"
+  command_topic: "patio/cmnd/controller/POWER1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Patio festoon"
+  state_topic: "patio/stat/controller/POWER2"
+  command_topic: "patio/cmnd/controller/POWER2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Logstore outside"
+  state_topic: "logstore/stat/controller/POWER1"
+  command_topic: "logstore/cmnd/controller/POWER1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+
+- platform: mqtt
+  name: "Logstore porch"
+  state_topic: "logstore/stat/controller/POWER2"
+  command_topic: "logstore/cmnd/controller/POWER2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Logstore indoor"
+  state_topic: "logstore/stat/controller/POWER3"
+  command_topic: "logstore/cmnd/controller/POWER3"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
