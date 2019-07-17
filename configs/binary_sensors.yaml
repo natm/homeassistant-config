@@ -1,3 +1,33 @@
+- platform: ping
+  name: "ping cloudflare dns"
+  host: 1.1.1.1
+  scan_interval: 30
+
+- platform: ping
+  name: "ping google dns"
+  host: 8.8.8.8
+  scan_interval: 30
+
+- platform: ping
+  name: "ping rt1.home.nat.ms"
+  host: rt1.home.nat.ms
+  scan_interval: 30
+
+- platform: ping
+  name: "ping pembswifi resolver 1"
+  host: 185.19.148.98
+  scan_interval: 30
+
+- platform: ping
+  name: "ping pembswifi resolver 2"
+  host: 185.19.149.98
+  scan_interval: 30
+
+- platform: ping
+  name: "ping pembswifi ntp"
+  host: ntp.pembswifi.net
+  scan_interval: 30
+
 - platform: mqtt
   name: "shed door"
   state_topic: "pirelay1/doorcontact2"

@@ -82,6 +82,14 @@ fastdotcom:
   scan_interval:
       minutes: 30
 
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret

@@ -44,6 +44,15 @@ cameras:
     - camera.Shed_1
     - camera.Woods_1
     - camera.Nursery
+telecoms:
+  name: Telecoms
+  view: yes
+  entities:
+    - group.internet
+    - group.phones
+    - group.internet_ping_home
+    - group.internet_ping_pembswifi
+    - group.internet_ping_external
 development:
   name: Dev
   view: yes
@@ -76,7 +85,7 @@ barn:
 # workshop disabled: binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch,
 test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
 relay_boards: sensor.pirelay1_version, sensor.pirelay2_version, sensor.pirelay3_version
-internet: sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fastcom_download
+internet: sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fast_com_download
 bedroom_master:
   name: Master bedroom
   entities:
@@ -101,6 +110,21 @@ phones:
     - sensor.phone_last_incoming_call
     - sensor.phone_last_rejected_call
     - sensor.phone_last_outgoing_call
+internet_ping_home:
+  name: Ping home
+  entities:
+    - binary_sensor.ping_rt1_home_nat_ms
+internet_ping_pembswifi:
+  name: Ping Pembs Wifi
+  entities:
+    - binary_sensor.ping_pembswifi_ntp
+    - binary_sensor.ping_pembswifi_resolver_1
+    - binary_sensor.ping_pembswifi_resolver_2
+internet_ping_external:
+  name: Ping external
+  entities:
+    - binary_sensor.ping_cloudflare_dns
+    - binary_sensor.ping_google_dns
 weather:
   name: Weather
   entities:
