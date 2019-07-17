@@ -105,6 +105,31 @@
         friendly_name: Patio fountain
         icon: mdi:fountain
 
+# irrigation
+    switch.irrigation_a1:
+        friendly_name: Irrigiation A1
+        icon: mdi:flower
+    switch.irrigation_a2:
+        friendly_name: Irrigiation A2
+        icon: mdi:flower
+    switch.irrigation_a3:
+        friendly_name: Irrigiation A3
+        icon: mdi:flower
+    switch.irrigation_a4:
+        friendly_name: Irrigiation A4
+        icon: mdi:flower
+    switch.irrigation_b1:
+        friendly_name: Irrigiation B1
+        icon: mdi:flower
+    switch.irrigation_b2:
+        friendly_name: Irrigiation B2
+        icon: mdi:flower
+    switch.irrigation_b3:
+        friendly_name: Irrigiation B3
+        icon: mdi:flower
+    switch.irrigation_b4:
+        friendly_name: Irrigiation B4
+        icon: mdi:flower
 
 #    group.heating:
 #        hidden: true

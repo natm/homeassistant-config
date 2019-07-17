@@ -5,6 +5,7 @@ default_view:
   entities:
      - group.heating
      - group.garden
+     - group.irrigation
      - group.shed
      - group.barn
      - group.miscitems
@@ -140,3 +141,14 @@ miscitems:
   entities:
      - switch.hair_straightners
      - switch.lounge_lamp
+irrigation:
+  name: Irrigation
+  entities:
+    - switch.irrigation_a1
+    - switch.irrigation_a2
+    - switch.irrigation_a3
+    - switch.irrigation_a4
+    - switch.irrigation_b1
+    - switch.irrigation_b2
+    - switch.irrigation_b3
+    - switch.irrigation_b4

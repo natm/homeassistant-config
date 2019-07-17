@@ -62,3 +62,67 @@
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
+
+- platform: mqtt
+  name: "Irrigation A1"
+  state_topic: "irrigation1/stat/controller/POWER1"
+  command_topic: "irrigation1/cmnd/controller/POWER1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation A2"
+  state_topic: "irrigation1/stat/controller/POWER2"
+  command_topic: "irrigation1/cmnd/controller/POWER2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation A3"
+  state_topic: "irrigation1/stat/controller/POWER3"
+  command_topic: "irrigation1/cmnd/controller/POWER3"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation A4"
+  state_topic: "irrigation1/stat/controller/POWER4"
+  command_topic: "irrigation1/cmnd/controller/POWER4"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation B1"
+  state_topic: "irrigation2/stat/controller/POWER1"
+  command_topic: "irrigation2/cmnd/controller/POWER1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation B2"
+  state_topic: "irrigation2/stat/controller/POWER2"
+  command_topic: "irrigation2/cmnd/controller/POWER2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation B3"
+  state_topic: "irrigation2/stat/controller/POWER3"
+  command_topic: "irrigation2/cmnd/controller/POWER3"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Irrigation B4"
+  state_topic: "irrigation2/stat/controller/POWER4"
+  command_topic: "irrigation2/cmnd/controller/POWER4"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
