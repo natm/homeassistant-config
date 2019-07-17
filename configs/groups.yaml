@@ -8,7 +8,7 @@ default_view:
      - group.irrigation
      - group.shed
      - group.barn
-     - group.miscitems
+     - group.miscindoors
 #    - group.bedroom_master
 #    - group.shed
 #    - group.barn
@@ -18,13 +18,17 @@ indoors:
   name: Indoors
   view: yes
   entities:
+    - group.heating
     - group.bedroom_master
+    - group.miscindoors
 #    - group.climate
     - group.office
 outdoors:
   name: Outdoors
   view: yes
   entities:
+    - group.garden
+    - group.irrigation
     - group.shed
     - group.barn
 cameras:
@@ -57,7 +61,7 @@ development:
 shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, sensor.shed_door_template
 # shed disabled: binary_sensor.shed_inside_light_switch
 barn:
-  name: Barn and workshop
+  name: Barn and Workshop
   entities:
     - light.barn_festoon
     - light.barn_lower_storage_lights
@@ -136,7 +140,7 @@ garden:
     - switch.logstore_indoor
     - switch.logstore_porch
     - switch.logstore_outside
-miscitems:
+miscindoors:
   name: Various items
   entities:
      - switch.hair_straightners
