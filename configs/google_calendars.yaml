@@ -15,3 +15,7 @@
     name: bridgelights
     track: true
     search: bridge lights
+  - device_id: festoon
+    name: festoon
+    track: true
+    search: festoon

@@ -1,51 +1,50 @@
 - platform: generic
   name: Drive 1
-  still_image_url: !secret cctv_drive1_still
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/101/picture
   stream_source: !secret cctv_drive1_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
 
 - platform: generic
   name: Drive 2
-  still_image_url: !secret cctv_drive2_still
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/201/picture
   stream_source: !secret cctv_drive2_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
 
 - platform: generic
   name: Barn 1
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/301/picture
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  authentication: digest
 
-- platform: generic
-  name: Barn 2
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/401/picture
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: basic
+#- platform: generic
+#  name: Barn 2
+#  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/401/picture
+#  username: !secret cctv_cctvnvr1_username
+#  password: !secret cctv_cctvnvr1_password
+#  authentication: digest
 
 - platform: generic
   name: Workshop 1
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/501/picture
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  authentication: digest
 
 - platform: generic
   name: Shed 1
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/601/picture
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  authentication: digest
 
 - platform: generic
   name: Woods 1
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/701/picture
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
-  authentication: basic
-
-- platform: generic
-  name: Nursery
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/801/picture
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: basic
+  authentication: digest
