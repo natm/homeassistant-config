@@ -25,6 +25,11 @@ http:
 
 cloud:
 
+config:
+
+recorder:
+  purge_keep_days: 14
+
 sensor: !include sensors.yaml
 
 mqtt:
