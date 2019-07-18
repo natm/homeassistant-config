@@ -75,3 +75,6 @@
   name: logstore uptime
   state_topic: logstore/tele/controller/STATE
   value_template: '{{ value_json.Uptime }}'
+- platform: starlingbank
+  accounts:
+    - access_token: !secret starling_personal_access_token
