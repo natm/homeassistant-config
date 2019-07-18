@@ -23,6 +23,7 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
 
+cloud:
 
 sensor: !include sensors.yaml
 
