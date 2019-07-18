@@ -133,9 +133,8 @@ weather:
 location:
   name: location
   entities:
-    - device_tracker.nat6p_nat6p
-    - device_tracker.natnexus6p_natnexua6p
-    - device_tracker.natnexus6p_natnexus6p
+    - device_tracker.claires_iphone
+    - device_tracker.nats_iphone
 #climate:
 #  name: Climate
 #  entities:

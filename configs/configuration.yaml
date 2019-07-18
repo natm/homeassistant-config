@@ -42,8 +42,13 @@ sun:
 conversation:
 
 device_tracker:
-  platform: owntracks
-  max_gps_accuracy: 200
+  - platform: unifi
+    host: !secret unifi_host
+    username: !secret unifi_username
+    password: !secret unifi_password
+    site_id: !secret unifi_site
+    ssid_filter:
+      - 'LYG Home'
 
 camera: !include cameras.yaml
 
