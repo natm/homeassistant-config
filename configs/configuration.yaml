@@ -24,6 +24,10 @@ http:
   login_attempts_threshold: 5
 
 cloud:
+  alexa:
+    filter:
+      exclude_domains:
+        - group
 
 config:
 
