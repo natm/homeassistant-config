@@ -5,6 +5,7 @@ default_view:
   view: yes
   entities:
      - group.heating
+     - group.interiorlights
      - group.garden
      - group.irrigation
      - group.shed
@@ -20,7 +21,7 @@ indoors:
   view: yes
   entities:
     - group.heating
-    - group.bedroom_master
+    - group.interiorlights
     - group.miscindoors
 #    - group.climate
     - group.office
@@ -86,15 +87,12 @@ barn:
 test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
 relay_boards: sensor.pirelay1_version, sensor.pirelay2_version, sensor.pirelay3_version
 internet: sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fast_com_download
-bedroom_master:
-  name: Master bedroom
-  entities:
-    - sensor.bedroom_master_humidity
-    - sensor.bedroom_master_temperature
+
 office:
   name: Office
   entities:
     - sensor.office_door_template
+    - switch.office_light
 quick_scenes:
   name: Quick Scenes
   entities:
@@ -144,6 +142,11 @@ location:
 #    - climate.master_bed
 #    - climate.nursery
 #    - climate.office
+interiorlights:
+  name: Interior lights
+  entities:
+    - switch.office_light
+    - switch.downstairs_wc
 sethbed:
   name: Seth bed
   entities:

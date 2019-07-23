@@ -131,5 +131,12 @@
         friendly_name: Irrigiation B4
         icon: mdi:flower
 
+# interior lights
+    switch.office_light:
+      friendly_name: Office
+      icon: mdi:lightbulb
+    switch.downstairs_wc:
+      friendly_name: Downstairs toilet
+      icon: mdi:lightbulb
 #    group.heating:
 #        hidden: true
