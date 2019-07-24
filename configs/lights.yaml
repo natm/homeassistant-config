@@ -114,3 +114,11 @@
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
+
+- platform: mqtt
+  schema: json
+  name: Office Light RGB
+  state_topic: "home/rgb1"
+  command_topic: "home/rgb1/set"
+  brightness: true
+  rgb: true

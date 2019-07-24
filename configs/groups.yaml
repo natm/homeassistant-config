@@ -110,6 +110,7 @@ office:
   entities:
     - sensor.office_door_template
     - switch.office_light
+    - light.office_light_rgb
 quick_scenes:
   name: Quick Scenes
   control: hidden
