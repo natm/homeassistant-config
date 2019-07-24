@@ -23,7 +23,7 @@ Containerization:
  * scruitinizer
 * Logstash
  * publish to dockerhub
- 
+
 
 Automations:
 
@@ -55,9 +55,7 @@ New integrations:
 * send all MQTT messages to logstash, tag appropriately
 * UPS power events from logstash should trigger MQTT event to be sent
 * https://home-assistant.io/components/sensor.google_travel_time/
-* Amazon echo dot
 * [Current transformers](http://www.ebay.co.uk/itm/331978579185) on all henley blocks - using [OpenEnergyMonitor circuit](https://openenergymonitor.org/emon/buildingblocks/how-to-build-an-arduino-energy-monitor) with AT328 + ESP8266-201
-* Make owntracks work for both of us
 * Track locations of both vehicles
 * Send ODB2 data from cars to MQTT (HA+Munin)
 * Downstream internet current usage for neighbors (SNMP from Edgerouter-X)

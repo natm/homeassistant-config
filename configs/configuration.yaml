@@ -47,6 +47,12 @@ mqtt:
 frontend:
 history:
 logbook:
+  exclude:
+    entities:
+      - sensor.date_time
+      - sensor.logstore_uptime
+      - sensor.sethbed_uptime
+      - sun.sun
 updater:
 sun:
 conversation:

@@ -69,10 +69,19 @@ development:
     - group.sethbed
     - group.quick_scenes
 # groups
-shed: light.shed_led_flood_light_front, light.shed_led_flood_light_rear, light.shed_led_flood_light_side, light.shed_fluorescent_light_1, sensor.shed_door_template
+shed:
+  name: Shed
+  control: hidden
+  entities:
+    - light.shed_led_flood_light_front
+    - light.shed_led_flood_light_rear
+    - light.shed_led_flood_light_side
+    - light.shed_fluorescent_light_1
+    - sensor.shed_door_template
 # shed disabled: binary_sensor.shed_inside_light_switch
 barn:
   name: Barn and Workshop
+  control: hidden
   entities:
     - light.barn_festoon
     - light.barn_lower_storage_lights
@@ -86,50 +95,66 @@ barn:
 # workshop disabled: binary_sensor.workshop_inside_light_switch, binary_sensor.workshop_outdoor_light_switch,
 test: light.test_light_1, light.test_light_2, light.test_light_3, binary_sensor.test_switch_1, binary_sensor.test_door_1, sensor.pirelay3_version
 relay_boards: sensor.pirelay1_version, sensor.pirelay2_version, sensor.pirelay3_version
-internet: sensor.speedtest_download, sensor.speedtest_ping, sensor.speedtest_upload, sensor.fast_com_download
+internet:
+  name: Internet
+  control: hidden
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.fast_com_download
 
 office:
   name: Office
+  control: hidden
   entities:
     - sensor.office_door_template
     - switch.office_light
 quick_scenes:
   name: Quick Scenes
+  control: hidden
   entities:
     - scene.all_outdoor_lights_off
     - scene.outdoor_front_at_night
 electricity:
   name: Electricity
+  control: hidden
   entities:
     - sensor.currentcost_power
 phones:
   name: Telephones
+  control: hidden
   entities:
     - sensor.phone_last_incoming_call
     - sensor.phone_last_rejected_call
     - sensor.phone_last_outgoing_call
 internet_ping_home:
   name: Ping home
+  control: hidden
   entities:
     - binary_sensor.ping_rt1_home_nat_ms
 internet_ping_pembswifi:
   name: Ping Pembs Wifi
+  control: hidden
   entities:
     - binary_sensor.ping_pembswifi_ntp
     - binary_sensor.ping_pembswifi_resolver_1
     - binary_sensor.ping_pembswifi_resolver_2
 internet_ping_external:
   name: Ping external
+  control: hidden
   entities:
     - binary_sensor.ping_cloudflare_dns
     - binary_sensor.ping_google_dns
 weather:
   name: Weather
+  control: hidden
   entities:
     - sun.sun
     - sensor.yr_symbol
 location:
   name: location
+  control: hidden
   entities:
     - device_tracker.claires_iphone
     - device_tracker.nats_iphone
@@ -144,21 +169,25 @@ location:
 #    - climate.office
 interiorlights:
   name: Interior lights
+  control: hidden
   entities:
     - switch.office_light
     - switch.downstairs_wc
 sethbed:
   name: Seth bed
+  control: hidden
   entities:
     - sensor.sethbed_uptime
     - sensor.sethbed_version
 heating:
   name: Heating
+  control: hidden
   entities:
     - switch.heating_hot_water
     - switch.heating_central_heating
 garden:
   name: Garden
+  control: hidden
   entities:
     - switch.bridge_spotlights
     - switch.patio_fountain
@@ -169,11 +198,13 @@ garden:
     - switch.logstore_outside
 miscindoors:
   name: Various items
+  control: hidden
   entities:
      - switch.hair_straightners
      - switch.lounge_lamp
 irrigation:
   name: Irrigation
+  control: hidden
   entities:
     - switch.irrigation_a1
     - switch.irrigation_a2
