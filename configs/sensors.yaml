@@ -92,3 +92,20 @@
   community: !secret snmp_community
   version: '2c'
   scan_interval: 10
+- platform: alpha_vantage
+  api_key: !secret alpha_vantage
+  symbols:
+    - symbol: NFLX
+      name: stock_netflix
+  foreign_exchange:
+    - name: USD_GBP
+      from: USD
+      to: GBP
+    - name: GBP_USD
+      from: GBP
+      to: USD
+- platform: google_travel_time
+  name: travel_time_haverfordwest
+  api_key: !secret google_maps_api
+  origin: Castlemorris, Haverfordwest SA62 5ES
+  destination: Haverfordwest
