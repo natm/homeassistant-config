@@ -117,8 +117,16 @@
 
 - platform: mqtt
   schema: json
-  name: Office Light RGB
-  state_topic: "home/rgb1"
-  command_topic: "home/rgb1/set"
+  name: flood rgb1
+  state_topic: "rgblights/light1"
+  command_topic: "rgblights/light1/set"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: flood rgb2
+  state_topic: "rgblights/light2"
+  command_topic: "rgblights/light2/set"
   brightness: true
   rgb: true

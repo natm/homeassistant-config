@@ -110,7 +110,6 @@ office:
   entities:
     - sensor.office_door_template
     - switch.office_light
-    - light.office_light_rgb
 quick_scenes:
   name: Quick Scenes
   control: hidden
@@ -197,6 +196,8 @@ garden:
     - switch.logstore_indoor
     - switch.logstore_porch
     - switch.logstore_outside
+    - light.flood_rgb1
+    - light.flood_rgb2
 miscindoors:
   name: Various items
   control: hidden
