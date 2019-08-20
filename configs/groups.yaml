@@ -37,14 +37,17 @@ cameras:
   name: Cameras
   view: yes
   entities:
-    - camera.Drive_1
-    - camera.Drive_2
-    - camera.Barn_1
-    - camera.Barn_2
-    - camera.Workshop_1
-    - camera.Shed_1
-    - camera.Woods_1
-    - camera.Nursery
+    - camera.ch1
+    - camera.ch2
+    - camera.ch3
+    - camera.ch5
+    - camera.ch6
+    - camera.ch7
+    - camera.ch9
+    - camera.ch10
+    - camera.ch11
+    - camera.ch12
+    - camera.ch13
 telecoms:
   name: Telecoms
   view: yes

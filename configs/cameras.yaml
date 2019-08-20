@@ -1,50 +1,87 @@
 - platform: generic
-  name: Drive 1
+  name: ch1
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/101/picture
-  stream_source: !secret cctv_drive1_rtsp
+  stream_source: !secret cctv_ch1_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
 
 - platform: generic
-  name: Drive 2
+  name: ch2
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/201/picture
-  stream_source: !secret cctv_drive2_rtsp
+  stream_source: !secret cctv_ch2_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
 
 - platform: generic
-  name: Barn 1
+  name: ch3
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/301/picture
+  stream_source: !secret cctv_ch3_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
 
-#- platform: generic
-#  name: Barn 2
-#  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/401/picture
-#  username: !secret cctv_cctvnvr1_username
-#  password: !secret cctv_cctvnvr1_password
-#  authentication: digest
-
 - platform: generic
-  name: Workshop 1
+  name: ch5
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/501/picture
+  stream_source: !secret cctv_ch5_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
 
 - platform: generic
-  name: Shed 1
+  name: ch6
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/601/picture
+  stream_source: !secret cctv_ch6_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
 
 - platform: generic
-  name: Woods 1
+  name: ch7
   still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/701/picture
+  stream_source: !secret cctv_ch7_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
+
+- platform: generic
+  name: ch9
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/901/picture
+  stream_source: !secret cctv_ch9_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
+
+- platform: generic
+  name: ch10
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1001/picture
+  stream_source: !secret cctv_ch10_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
+
+- platform: generic
+  name: ch11
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1101/picture
+  stream_source: !secret cctv_ch11_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
+
+- platform: generic
+  name: ch12
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1201/picture
+  stream_source: !secret cctv_ch12_rtsp
+  username: !secret cctv_cctvnvr1_username
+  password: !secret cctv_cctvnvr1_password
+  authentication: digest
+
+- platform: generic
+  name: ch13
+  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1301/picture
+  stream_source: !secret cctv_ch13_rtsp
   username: !secret cctv_cctvnvr1_username
   password: !secret cctv_cctvnvr1_password
   authentication: digest
