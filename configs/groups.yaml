@@ -25,6 +25,7 @@ indoors:
     - group.miscindoors
 #    - group.climate
     - group.office
+    - group.sethbed
 outdoors:
   name: Outdoors
   view: yes
@@ -182,6 +183,20 @@ sethbed:
   entities:
     - sensor.sethbed_uptime
     - sensor.sethbed_version
+    - switch.sethbed_local_control
+    - switch.sethbed_output_led_power
+    - switch.sethbed_output_led_1
+    - switch.sethbed_output_led_2
+    - switch.sethbed_output_led_3
+    - switch.sethbed_output_relay_1
+    - switch.sethbed_output_relay_2
+    - switch.sethbed_output_relay_3
+    - switch.sethbed_output_relay_4
+    - switch.sethbed_output_relay_5
+    - switch.sethbed_output_relay_6
+    - switch.sethbed_output_relay_7
+    - switch.sethbed_output_relay_8
+    - script.sethbed_service_reset
 heating:
   name: Heating
   control: hidden

@@ -120,3 +120,11 @@ google:
 system_health:
 
 switch: !include switches.yaml
+
+script:
+  sethbed_service_reset:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'tractorbed/seth/service/cmnd/reset'
+          payload: 'RESET'

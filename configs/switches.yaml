@@ -142,3 +142,94 @@
   payload_on: "ON"
   payload_off: "OFF"
   retain: true
+
+- platform: mqtt
+  name: "Sethbed local control"
+  state_topic: "tractorbed/seth/service/stat/localcontrol"
+  command_topic: "tractorbed/seth/service/cmnd/localcontrol"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output LED power"
+  state_topic: "tractorbed/seth/outputs/stat/ledpower"
+  command_topic: "tractorbed/seth/outputs/cmnd/ledpower"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output LED 1"
+  state_topic: "tractorbed/seth/outputs/stat/led1"
+  command_topic: "tractorbed/seth/outputs/cmnd/led1"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output LED 2"
+  state_topic: "tractorbed/seth/outputs/stat/led2"
+  command_topic: "tractorbed/seth/outputs/cmnd/led2"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output LED 3"
+  state_topic: "tractorbed/seth/outputs/stat/led3"
+  command_topic: "tractorbed/seth/outputs/cmnd/led3"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 1"
+  state_topic: "tractorbed/seth/outputs/stat/relay1"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay1"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 2"
+  state_topic: "tractorbed/seth/outputs/stat/relay2"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay2"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 3"
+  state_topic: "tractorbed/seth/outputs/stat/relay3"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay3"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 4"
+  state_topic: "tractorbed/seth/outputs/stat/relay4"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay4"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 5"
+  state_topic: "tractorbed/seth/outputs/stat/relay5"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay5"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 6"
+  state_topic: "tractorbed/seth/outputs/stat/relay6"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay6"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 7"
+  state_topic: "tractorbed/seth/outputs/stat/relay7"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay7"
+  payload_on: "ON"
+  payload_off: "OFF"
+
+- platform: mqtt
+  name: "Sethbed output Relay 8"
+  state_topic: "tractorbed/seth/outputs/stat/relay8"
+  command_topic: "tractorbed/seth/outputs/cmnd/relay8"
+  payload_on: "ON"
+  payload_off: "OFF"
