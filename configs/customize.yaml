@@ -130,6 +130,22 @@
     switch.irrigation_b4:
         friendly_name: Irrigiation B4
         icon: mdi:flower
+# sethbed
+    switch.sethbed_local_control:
+        friendly_name: Local control
+        icon: mdi:hand
+    switch.sethbed_output_led_power:
+        friendly_name: LED Power
+        icon: mdi:led-on
+    switch.sethbed_output_led_1:
+        friendly_name: LED 1
+        icon: mdi:led-on
+    switch.sethbed_output_led_2:
+        friendly_name: LED 2
+        icon: mdi:led-on
+    switch.sethbed_output_led_3:
+        friendly_name: LED 3
+        icon: mdi:led-on
 
 # interior lights
     switch.office_light:
