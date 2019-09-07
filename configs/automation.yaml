@@ -351,25 +351,6 @@
       data_template:
         message: ":phone: Outgoing phone call to {{ trigger.payload_json.to_display }}"
 
-# bridge_lights
-- alias: bridge lights on at 7pm
-  hide_entity: True
-  trigger:
-    platform: time
-    at: '19:00:00'
-  action:
-   - service: switch.turn_on
-     entity_id: switch.bridge_lights
-- alias: bridge lights off at 11:30pm
-  hide_entity: True
-  trigger:
-    platform: time
-    at: '23:30:00'
-  action:
-   - service: switch.turn_off
-     entity_id: switch.bridge_lights
-
-
 # heating - hot water
 - alias: hot water on at 6am
   hide_entity: True
