@@ -290,23 +290,6 @@
     data:
       message: ":door: Shed door closed"
 
--  alias: shed lights on when door opens
-   hide_entity: True
-   trigger:
-     platform: state
-     entity_id: binary_sensor.shed_door
-     from: 'on'
-     to: 'off'
-   condition:
-      condition: state
-      entity_id: light.shed_fluorescent_light_1
-      state: 'off'
-   action:
-    - service: light.turn_on
-      entity_id: light.shed_fluorescent_light_1
-    - service: notify.slackbot
-      data:
-        message: ":bulb: Shed lights switched on automatically"
 # office
 - alias: notify office door opened
   hide_entity: True
@@ -384,3 +367,4 @@
   action:
    - service: switch.turn_off
      entity_id: switch.heating_hot_water
+
