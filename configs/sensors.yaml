@@ -21,6 +21,18 @@
   name: pirelay3 version
   state_topic: "pirelay3/version"
 - platform: mqtt
+  name: greenhouse temperature
+  unit_of_measurement: '°C'
+  state_topic: shellies/shellyht-E01199/sensor/temperature
+- platform: mqtt
+  name: greenhouse humidity
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-E01199/sensor/humidity
+- platform: mqtt
+  name: greenhouse battery
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-E01199/sensor/battery
+- platform: mqtt
   name: seth bedroom temperature
   unit_of_measurement: '°C'
   state_topic: shellies/shellyht-E005D9/sensor/temperature

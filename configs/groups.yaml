@@ -32,6 +32,7 @@ outdoors:
   view: yes
   entities:
     - group.garden
+    - group.greenhouse
     - group.irrigation
     - group.shed
     - group.barn
@@ -108,6 +109,13 @@ internet:
     - sensor.speedtest_ping
     - sensor.speedtest_upload
     - sensor.fast_com_download
+greenhouse:
+  name: Greenhouse
+  control: hidden
+  entities:
+    - sensor.greenhouse_temperature
+    - sensor.greenhouse_humidity
+    - sensor.greenhouse_battery
 sethbedroom:
   name: Seth bedroom
   control: hidden
