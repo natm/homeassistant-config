@@ -53,6 +53,7 @@ logbook:
       - sensor.logstore_uptime
       - sensor.sethbed_uptime
       - sun.sun
+
 updater:
 sun:
 conversation:

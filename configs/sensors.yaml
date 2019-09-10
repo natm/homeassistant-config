@@ -82,32 +82,20 @@
 - platform: starlingbank
   accounts:
     - access_token: !secret starling_personal_access_token
-- platform: snmp
-  name: internet uplink1 in
-  host: rt1.home.nat.ms
-  baseoid: 1.3.6.1.2.1.31.1.1.1.6.9
-  community: !secret snmp_community
-  version: '2c'
-  scan_interval: 10
-- platform: snmp
-  name: internet uplink1 out
-  host: rt1.home.nat.ms
-  baseoid: 1.3.6.1.2.1.31.1.1.1.10.9
-  community: !secret snmp_community
-  version: '2c'
-  scan_interval: 10
-- platform: alpha_vantage
-  api_key: !secret alpha_vantage
-  symbols:
-    - symbol: NFLX
-      name: stock_netflix
-  foreign_exchange:
-    - name: USD_GBP
-      from: USD
-      to: GBP
-    - name: GBP_USD
-      from: GBP
-      to: USD
+#- platform: snmp
+#  name: internet uplink1 in
+#  host: rt1.home.nat.ms
+#  baseoid: 1.3.6.1.2.1.31.1.1.1.6.9
+#  community: !secret snmp_community
+#  version: '2c'
+#  scan_interval: 10
+#- platform: snmp
+#  name: internet uplink1 out
+#  host: rt1.home.nat.ms
+#  baseoid: 1.3.6.1.2.1.31.1.1.1.10.9
+#  community: !secret snmp_community
+#  version: '2c'
+#  scan_interval: 10
 - platform: google_travel_time
   name: travel_time_haverfordwest
   api_key: !secret google_maps_api
