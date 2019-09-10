@@ -76,6 +76,17 @@
   name: sethbed uptime
   state_topic: "tractorbed/seth/uptime"
 - platform: mqtt
+  name: sethbed playing
+  state_topic: "tractorbed/seth/sound/playing"
+- platform: mqtt
+  name: sethbed temperature
+  unit_of_measurement: '°C'
+  state_topic: tractorbed/seth/temperature
+- platform: mqtt
+  name: sethbed humidity
+  unit_of_measurement: '%'
+  state_topic: tractorbed/seth/humidity
+- platform: mqtt
   name: logstore uptime
   state_topic: logstore/tele/controller/STATE
   value_template: '{{ value_json.Uptime }}'

@@ -190,6 +190,9 @@ sethbed:
   entities:
     - sensor.sethbed_uptime
     - sensor.sethbed_version
+    - sensor.sethbed_temperature
+    - sensor.sethbed_humidity
+    - sensor.sethbed_playing
     - switch.sethbed_local_control
     - switch.sethbed_output_led_power
     - switch.sethbed_output_led_1
