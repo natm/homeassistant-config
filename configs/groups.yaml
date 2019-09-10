@@ -25,6 +25,7 @@ indoors:
     - group.miscindoors
 #    - group.climate
     - group.office
+    - group.sethbedroom
     - group.sethbed
 outdoors:
   name: Outdoors
@@ -107,7 +108,13 @@ internet:
     - sensor.speedtest_ping
     - sensor.speedtest_upload
     - sensor.fast_com_download
-
+sethbedroom:
+  name: Seth bedroom
+  control: hidden
+  entities:
+    - sensor.seth_bedroom_temperature
+    - sensor.seth_bedroom_humidity
+    - sensor.seth_bedroom_battery
 office:
   name: Office
   control: hidden
