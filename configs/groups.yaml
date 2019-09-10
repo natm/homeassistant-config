@@ -112,7 +112,7 @@ internet:
     - sensor.speedtest_upload
     - sensor.fast_com_download
 masterbedroom:
-  name: Lounge
+  name: Master bedroom
   control: hidden
   entities:
     - sensor.master_bedroom_temperature
