@@ -24,7 +24,9 @@ indoors:
     - group.interiorlights
     - group.miscindoors
 #    - group.climate
+    - group.lounge
     - group.office
+    - group.masterbedroom
     - group.sethbedroom
     - group.sethbed
 outdoors:
@@ -109,6 +111,21 @@ internet:
     - sensor.speedtest_ping
     - sensor.speedtest_upload
     - sensor.fast_com_download
+masterbedroom:
+  name: Lounge
+  control: hidden
+  entities:
+    - sensor.master_bedroom_temperature
+    - sensor.master_bedroom_humidity
+    - sensor.master_bedroom_battery
+lounge:
+  name: Lounge
+  control: hidden
+  entities:
+    - sensor.lounge_temperature
+    - sensor.lounge_humidity
+    - sensor.lounge_battery
+    - switch.lounge_lamp
 greenhouse:
   name: Greenhouse
   control: hidden
@@ -239,7 +256,6 @@ miscindoors:
   control: hidden
   entities:
      - switch.hair_straightners
-     - switch.lounge_lamp
 irrigation:
   name: Irrigation
   control: hidden

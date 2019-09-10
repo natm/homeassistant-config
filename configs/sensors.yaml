@@ -21,6 +21,30 @@
   name: pirelay3 version
   state_topic: "pirelay3/version"
 - platform: mqtt
+  name: master bedroom temperature
+  unit_of_measurement: '°C'
+  state_topic: shellies/shellyht-E01602/sensor/temperature
+- platform: mqtt
+  name: master bedroom humidity
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-E01602/sensor/humidity
+- platform: mqtt
+  name: master bedroom battery
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-E01602/sensor/battery
+- platform: mqtt
+  name: lounge temperature
+  unit_of_measurement: '°C'
+  state_topic: shellies/shellyht-D0ED84/sensor/temperature
+- platform: mqtt
+  name: lounge humidity
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-D0ED84/sensor/humidity
+- platform: mqtt
+  name: lounge battery
+  unit_of_measurement: '%'
+  state_topic: shellies/shellyht-D0ED84/sensor/battery
+- platform: mqtt
   name: greenhouse temperature
   unit_of_measurement: '°C'
   state_topic: shellies/shellyht-E01199/sensor/temperature
