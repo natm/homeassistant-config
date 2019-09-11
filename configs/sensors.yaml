@@ -111,6 +111,8 @@
 - platform: mqtt
   name: sethbed uptime
   state_topic: "tractorbed/seth/uptime"
+  value_template: '{{ (((value | int) / 60) | int) }}'
+  unit_of_measurement: hours
 - platform: mqtt
   name: sethbed playing
   state_topic: "tractorbed/seth/sound/playing"
@@ -118,17 +120,47 @@
   name: sethbed temperature
   unit_of_measurement: '°C'
   state_topic: tractorbed/seth/temperature
+  value_template: '{{ (value | int) }}'
 - platform: mqtt
   name: sethbed humidity
   unit_of_measurement: '%'
   state_topic: tractorbed/seth/humidity
+  value_template: '{{ (value | int) }}'
 - platform: mqtt
   name: logstore uptime
   state_topic: logstore/tele/controller/STATE
   value_template: '{{ value_json.Uptime }}'
-- platform: starlingbank
-  accounts:
-    - access_token: !secret starling_personal_access_token
+#
+- platform: mqtt
+  name: starling joint balance amount
+  state_topic: finance/starling/joint/balances/amount
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling joint balance cleared
+  state_topic: finance/starling/joint/balances/clearedbalance
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling joint balance effective
+  state_topic: finance/starling/joint/balances/effectivebalance
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling joint balance pending
+  state_topic: finance/starling/joint/balances/pendingtransactions
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling joint balance available
+  state_topic: finance/starling/joint/balances/availabletospend
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling joint balance overdraft
+  state_topic: finance/starling/joint/balances/acceptedoverdraft
+  unit_of_measurement: '£'
+#
+- platform: mqtt
+  name: nasdaq nflx
+  state_topic: finance/stocks/nasdaq/nflx
+  unit_of_measurement: '$'
+#
 #- platform: snmp
 #  name: internet uplink1 in
 #  host: rt1.home.nat.ms
