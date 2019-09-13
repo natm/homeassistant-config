@@ -120,12 +120,12 @@
   name: sethbed temperature
   unit_of_measurement: '°C'
   state_topic: tractorbed/seth/temperature
-  value_template: '{{ (value | int) }}'
+  value_template: '{{ ((value | float) | round(2)) }}'
 - platform: mqtt
   name: sethbed humidity
   unit_of_measurement: '%'
   state_topic: tractorbed/seth/humidity
-  value_template: '{{ (value | int) }}'
+  value_template: '{{ ((value | float) | round(2)) }}'
 - platform: mqtt
   name: logstore uptime
   state_topic: logstore/tele/controller/STATE
@@ -158,7 +158,7 @@
 #
 - platform: mqtt
   name: nasdaq nflx
-  state_topic: finance/stocks/nasdaq/nflx
+  state_topic: finance/stocks/nflx/ask
   unit_of_measurement: '$'
 #
 #- platform: snmp
