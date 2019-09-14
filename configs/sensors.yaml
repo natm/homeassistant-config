@@ -1,3 +1,14 @@
+- platform: darksky
+  api_key: !secret darksky_api_key
+  latitude: !secret location_latitude
+  longitude: !secret location_longitude
+  monitored_conditions:
+  - temperature
+  - temperature_max
+  - temperature_min
+  - humidity
+  - precip_probability
+  - cloud_cover
 - platform: yr
 - platform: cert_expiry
   name: "certexpiry ha.home.nat.ms"
