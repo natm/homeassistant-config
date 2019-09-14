@@ -23,3 +23,13 @@
     mode=0644
   notify:
     - restart home assistant
+- name: Copy zones.yaml
+  copy:
+    src=../../../homeassistant-config-secrets/zones.yaml
+    dest=/etc/homeassistant/config/zones.yaml
+    owner=root
+    group=root
+    mode=0644
+  notify:
+    - restart home assistant
+

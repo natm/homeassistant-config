@@ -79,6 +79,8 @@ automation: !include automation.yaml
 
 scene: !include scenes.yaml
 
+zones: !include zones.yaml
+
 notify:
   - name: slackbot
     platform: slack
