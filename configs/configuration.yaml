@@ -124,3 +124,10 @@ script:
         data_template:
           topic: 'tractorbed/seth/service/cmnd/reset'
           payload: 'RESET'
+  sethbed_nightmode_toggle:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'tractorbed/seth/mode/nightmode'
+          payload: 'TOGGLE'
+

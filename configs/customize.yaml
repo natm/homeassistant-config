@@ -95,9 +95,6 @@
     switch.bridge_spotlights:
         friendly_name: Bridge lights
         icon: mdi:bridge
-    switch.mega_festoon:
-        friendly_name: Mega festoon
-        icon: mdi:lightbulb
     switch.patio_festoon:
         friendly_name: Patio festoon
         icon: mdi:lightbulb
