@@ -166,11 +166,29 @@
   name: starling joint balance overdraft
   state_topic: finance/starling/joint/balances/acceptedoverdraft
   unit_of_measurement: '£'
-#
+- platform: mqtt
+  name: starling joint lastevent description
+  state_topic: finance/starling/joint/event/description
 - platform: mqtt
   name: nasdaq nflx
   state_topic: finance/stocks/nflx/ask
   unit_of_measurement: '$'
+- platform: mqtt
+  name: starling goal roundup
+  state_topic: "finance/starling/joint/goals/Round up/saved"
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling goal total saved
+  state_topic: "finance/starling/joint/goals/total/saved"
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling goal total target
+  state_topic: "finance/starling/joint/goals/total/target"
+  unit_of_measurement: '£'
+- platform: mqtt
+  name: starling goal total percentage
+  state_topic: "finance/starling/joint/goals/total/percentage"
+  unit_of_measurement: '%'
 #
 #- platform: snmp
 #  name: internet uplink1 in

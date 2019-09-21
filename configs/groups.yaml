@@ -88,6 +88,13 @@ development:
     - group.phones
     - group.sethbed
     - group.quick_scenes
+finance:
+  name: Finance
+  view: yes
+  entities:
+    - group.starlingjoint
+    - group.starlingsavings
+    - group.stockmarket
 # groups
 shed:
   name: Shed
@@ -291,3 +298,26 @@ devicesshelly:
     - sensor.master_bedroom_battery
     - sensor.seth_bedroom_battery
     - sensor.greenhouse_battery
+starlingjoint:
+    name: Starling joint account
+    control: hidden
+    entities:
+    - sensor.starling_joint_lastevent_description
+    - sensor.starling_joint_balance_available
+    - sensor.starling_joint_balance_amount
+    - sensor.starling_joint_balance_cleared
+    - sensor.starling_joint_balance_effective
+    - sensor.starling_joint_balance_pending
+starlingsavings:
+    name: Starling savings
+    control: hidden
+    entities:
+      - sensor.starling_goal_total_saved
+      - sensor.starling_goal_total_target
+      - sensor.starling_goal_total_percentage
+      - sensor.starling_goal_roundup
+stockmarket:
+    name: Market
+    control: hidden
+    entities:
+      - sensor.nasdaq_nflx

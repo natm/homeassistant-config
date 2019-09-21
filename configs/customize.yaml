@@ -153,3 +153,9 @@
       icon: mdi:lightbulb
 #    group.heating:
 #        hidden: true
+    sensor.nasdaq_nflx:
+      friendly_name: Netflix
+      icon: mdi:netflix
+    script.sethbed_nightmode_toggle:
+      friendly_name: Bed night mode
+      icon: mdi:progress-clock
