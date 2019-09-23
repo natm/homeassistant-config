@@ -143,7 +143,30 @@
     switch.sethbed_output_led_3:
         friendly_name: LED 3
         icon: mdi:led-on
-
+    switch.sethbed_output_relay_1:
+        friendly_name: Headlight
+        icon: mdi:car-light-dimmed
+    switch.sethbed_output_relay_2:
+        friendly_name: Headlight
+        icon: mdi:car-light-dimmed
+    switch.sethbed_output_relay_3:
+        friendly_name: Roof
+        icon: mdi:car-parking-lights
+    switch.sethbed_output_relay_4:
+        friendly_name: Roof
+        icon: mdi:car-parking-lights
+    switch.sethbed_output_relay_5:
+        friendly_name: Roof
+        icon: mdi:car-parking-lights
+    switch.sethbed_output_relay_6:
+        friendly_name: Roof
+        icon: mdi:car-parking-lights
+    switch.sethbed_output_relay_7:
+        friendly_name: Orange beacon
+        icon: mdi:alarm-light-outline
+    switch.sethbed_output_relay_8:
+        friendly_name: Spare 5v
+        icon: mdi:wrench
 # interior lights
     switch.office_light:
       friendly_name: Office
@@ -159,3 +182,28 @@
     script.sethbed_nightmode_toggle:
       friendly_name: Bed night mode
       icon: mdi:progress-clock
+    sensor.starling_goal_total_saved:
+      friendly_name: Saved
+      icon: mdi:piggy-bank
+    sensor.starling_goal_total_target:
+      friendly_name: Target
+      icon: mdi:target
+    sensor.starling_goal_total_percentage:
+      friendly_name: Percentage
+      icon: mdi:sack-percent
+    sensor.starling_goal_roundup:
+      friendly_name: Round up
+      icon: mdi:cash-refund
+
+    sensor.lounge_battery:
+      friendly_name: Lounge
+      icon: mdi:battery
+    sensor.master_bedroom_battery:
+      friendly_name: Master bedroom
+      icon: mdi:battery
+    sensor.seth_bedroom_battery:
+      friendly_name: Seth bedroom
+      icon: mdi:battery
+    sensor.greenhouse_battery:
+      friendly_name: Greenhouse
+      icon: mdi:battery
