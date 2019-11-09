@@ -79,6 +79,9 @@
     switch.heating_hot_water:
         friendly_name: Hot water
         icon: mdi:water-pump
+    switch.heating_hot_water_immersion:
+        friendly_name: Immersion
+        icon: mdi:water-boiler
     switch.heating_central_heating:
         friendly_name: Central heating
         icon: mdi:radiator
