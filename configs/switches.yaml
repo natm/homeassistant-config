@@ -15,6 +15,14 @@
   retain: true
 
 - platform: mqtt
+  name: "Heating hot water immersion"
+  state_topic: "heating/stat/controller/POWER3"
+  command_topic: "heating/cmnd/controller/POWER3"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
   name: "Patio fountain"
   state_topic: "patio/stat/controller/POWER1"
   command_topic: "patio/cmnd/controller/POWER1"

@@ -23,6 +23,7 @@ quickenvironment:
   control: hidden
   entities:
     - switch.heating_hot_water
+    - switch.heating_hot_water_immersion
     - switch.heating_central_heating
     - sensor.lounge_temperature
     - sensor.master_bedroom_temperature
@@ -262,6 +263,7 @@ heating:
   control: hidden
   entities:
     - switch.heating_hot_water
+    - switch.heating_hot_water_immersion
     - switch.heating_central_heating
 garden:
   name: Garden
