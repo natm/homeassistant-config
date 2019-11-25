@@ -10,12 +10,6 @@
   - precip_probability
   - cloud_cover
 - platform: yr
-- platform: cert_expiry
-  name: "certexpiry ha.home.nat.ms"
-  host: ha.home.nat.ms
-- platform: cert_expiry
-  name: "certexpiry llwynygorras.pbx.pembswifi.net"
-  host: llwynygorras.pbx.pembswifi.net
 - platform: speedtest
   monitored_conditions:
   - ping

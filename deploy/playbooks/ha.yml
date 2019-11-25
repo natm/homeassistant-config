@@ -2,7 +2,7 @@
 
 - name: Home Assistant and configurations
   hosts: all
-  sudo: True
+#  sudo: True
 
   roles:
     - { role: homeassistant-configs,             tags: ["homeassistant-configs"] }

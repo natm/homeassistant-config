@@ -24,7 +24,7 @@ pip install git+git://github.com/ansible/ansible.git@devel
 **Pushing configurations**
 
 ```
-ansible-playbook -i deploy/hosts deploy/playbooks/ha.yml
+ansible-playbook -i deploy/hosts --become deploy/playbooks/ha.yml
 ```
 
 ## Running Home Assistant in Docker

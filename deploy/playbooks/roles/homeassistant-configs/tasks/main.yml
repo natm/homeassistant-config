@@ -1,12 +1,12 @@
-- name: Create /etc/homeassistant/config
+- name: Create /data/containers/homeassistant/config
   file:
-    path=/etc/homeassistant/config
+    path=/data/containers/homeassistant/config
     state=directory
     mode=0755
 - name: Copy config YAML files
   copy:
     src={{ item }}
-    dest=/etc/homeassistant/config
+    dest=/data/containers/homeassistant/config
     owner=root
     group=root
     mode=0644
@@ -17,7 +17,7 @@
 - name: Copy secrets.yaml
   copy:
     src=../../../homeassistant-config-secrets/secrets.yaml
-    dest=/etc/homeassistant/config/secrets.yaml
+    dest=/data/containers/homeassistant/config/secrets.yaml
     owner=root
     group=root
     mode=0644
@@ -26,7 +26,7 @@
 - name: Copy zones.yaml
   copy:
     src=../../../homeassistant-config-secrets/zones.yaml
-    dest=/etc/homeassistant/config/zones.yaml
+    dest=/data/containers/homeassistant/config/zones.yaml
     owner=root
     group=root
     mode=0644
