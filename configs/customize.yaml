@@ -87,12 +87,17 @@
         icon: mdi:radiator
 
 # misc items
-    switch.lounge_lamp:
+    switch.hs100_1:
+        friendly_name: Hair straightners
+    switch.hs100_3:
         friendly_name: Lounge lamp
         icon: mdi:lamp
-    switch.temp1:
+    switch.hs100_2:
         friendly_name: Christmas tree
         icon: mdi:pine-tree
+    switch.hs100_4:
+        friendly_name: Garland
+        icon: mdi:lightbulb
 
 # garden
     switch.bridge_spotlights:

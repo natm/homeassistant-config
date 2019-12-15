@@ -145,7 +145,8 @@ lounge:
   entities:
     - sensor.lounge_temperature
     - sensor.lounge_humidity
-    - switch.lounge_lamp
+    - switch.hs100_3
+    - switch.hs100_2
 greenhouse:
   name: Greenhouse
   control: hidden
@@ -279,7 +280,8 @@ miscindoors:
   name: Various items
   control: hidden
   entities:
-     - switch.hair_straightners
+     - switch.hs100_1
+     - switch.hs100_4
 irrigation:
   name: Irrigation
   control: hidden
