@@ -89,6 +89,7 @@ development:
     - group.phones
     - group.sethbed
     - group.quick_scenes
+    - group.iocontrollerdev
 finance:
   name: Finance
   view: yes
@@ -325,3 +326,24 @@ stockmarket:
     control: hidden
     entities:
       - sensor.nasdaq_nflx
+iocontrollerdev:
+    name: IOController development dev1
+    control: hidden
+    entities:
+      - sensor.iocontroller_dev1_connection
+      - switch.iocontroller_dev1_do1
+      - switch.iocontroller_dev1_do2
+      - switch.iocontroller_dev1_do3
+      - switch.iocontroller_dev1_do4
+      - switch.iocontroller_dev1_do5
+      - switch.iocontroller_dev1_do6
+      - switch.iocontroller_dev1_do7
+      - switch.iocontroller_dev1_do8
+      - sensor.iocontroller_dev1_di1
+      - sensor.iocontroller_dev1_di2
+      - sensor.iocontroller_dev1_di3
+      - sensor.iocontroller_dev1_di4
+      - sensor.iocontroller_dev1_di5
+      - sensor.iocontroller_dev1_di6
+      - sensor.iocontroller_dev1_di7
+      - sensor.iocontroller_dev1_di8

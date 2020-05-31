@@ -241,3 +241,67 @@
   command_topic: "tractorbed/seth/outputs/cmnd/relay8"
   payload_on: "ON"
   payload_off: "OFF"
+
+- platform: mqtt
+  name: "IOController dev1 DO1"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/1/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/1/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO2"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/2/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/2/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO3"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/3/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/3/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO4"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/4/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/4/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO5"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/5/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/5/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO6"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/6/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/6/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO7"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/7/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/7/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "IOController dev1 DO8"
+  state_topic: "iocontroller/dev/boards/dev1/digitaloutput/8/status"
+  command_topic: "iocontroller/dev/boards/dev1/digitaloutput/8/command"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
