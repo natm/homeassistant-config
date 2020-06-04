@@ -284,15 +284,3 @@
 - platform: mqtt
   name: IOController cupboard2 connection
   state_topic: "iocontroller/home/boards/cupboard2/connection"
-- platform: mqtt
-  name: Windows Office Left
-  state_topic: "windows/office/left/status"
-- platform: mqtt
-  name: Windows Office Right
-  state_topic: "windows/office/right/status"
-- platform: mqtt
-  name: Windows BackBedroom Left
-  state_topic: "windows/backbedroom/left/status"
-- platform: mqtt
-  name: Windows BackBedroom Right
-  state_topic: "windows/backbedroom/right/status"

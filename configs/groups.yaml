@@ -169,23 +169,14 @@ office:
   entities:
     - sensor.office_door_template
     - switch.office_light
-    - cover.window_dev
-    - sensor.windows_office_left
-    - script.windows_office_left_open
-    - script.windows_office_left_close
-    - sensor.windows_office_right
-    - script.windows_office_right_open
-    - script.windows_office_right_close
+    - cover.office_window_left
+    - cover.office_window_right
 backbedroom:
   name: Back bedroom
   control: hidden
   entities:
-    - sensor.windows_backbedroom_left
-    - script.windows_backbedroom_left_open
-    - script.windows_backbedroom_left_close
-    - sensor.windows_backbedroom_right
-    - script.windows_backbedroom_right_open
-    - script.windows_backbedroom_right_close
+    - cover.backbedroom_window_left
+    - cover.backbedroom_window_right
 quick_scenes:
   name: Quick Scenes
   control: hidden
