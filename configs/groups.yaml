@@ -169,6 +169,7 @@ office:
   entities:
     - sensor.office_door_template
     - switch.office_light
+    - cover.window_dev
     - sensor.windows_office_left
     - script.windows_office_left_open
     - script.windows_office_left_close

@@ -1,6 +1,6 @@
 cover:
   - platform: mqtt
-    name: "MQTT Cover Dev"
+    name: "Window Dev"
     command_topic: "windows/office/left/command"
     state_topic: "windows/office/left/status"
     qos: 0
