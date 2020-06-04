@@ -139,7 +139,54 @@ script:
         data_template:
           topic: 'tractorbed/seth/mode/nightmode'
           payload: 'TOGGLE'
-
+  windows_office_left_open:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/office/left/command'
+          payload: 'OPEN'
+  windows_office_left_close:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/office/left/command'
+          payload: 'CLOSE'
+  windows_office_right_open:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/office/right/command'
+          payload: 'OPEN'
+  windows_office_right_close:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/office/right/command'
+          payload: 'CLOSE'
+  windows_backbedroom_left_open:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/backbedroom/left/command'
+          payload: 'OPEN'
+  windows_backbedroom_left_close:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/backbedroom/left/command'
+          payload: 'CLOSE'
+  windows_backbedroom_right_open:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/backbedroom/right/command'
+          payload: 'OPEN'
+  windows_backbedroom_right_close:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: 'windows/backbedroom/right/command'
+          payload: 'CLOSE'
 ios:
 
 influxdb:

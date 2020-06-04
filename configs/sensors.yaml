@@ -230,3 +230,69 @@
 - platform: mqtt
   name: IOController dev1 connection
   state_topic: "iocontroller/dev/boards/dev1/connection"
+- platform: mqtt
+  name: IOController cupboard1 DI1
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/1/status"
+- platform: mqtt
+  name: IOController cupboard1 DI2
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/2/status"
+- platform: mqtt
+  name: IOController cupboard1 DI3
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/3/status"
+- platform: mqtt
+  name: IOController cupboard1 DI4
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/4/status"
+- platform: mqtt
+  name: IOController cupboard1 DI5
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/5/status"
+- platform: mqtt
+  name: IOController cupboard1 DI6
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/6/status"
+- platform: mqtt
+  name: IOController cupboard1 DI7
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/7/status"
+- platform: mqtt
+  name: IOController cupboard1 DI8
+  state_topic: "iocontroller/home/boards/cupboard1/digitalinput/8/status"
+- platform: mqtt
+  name: IOController cupboard1 connection
+  state_topic: "iocontroller/home/boards/cupboard1/connection"
+- platform: mqtt
+  name: IOController cupboard2 DI1
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/1/status"
+- platform: mqtt
+  name: IOController cupboard2 DI2
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/2/status"
+- platform: mqtt
+  name: IOController cupboard2 DI3
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/3/status"
+- platform: mqtt
+  name: IOController cupboard2 DI4
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/4/status"
+- platform: mqtt
+  name: IOController cupboard2 DI5
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/5/status"
+- platform: mqtt
+  name: IOController cupboard2 DI6
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/6/status"
+- platform: mqtt
+  name: IOController cupboard2 DI7
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/7/status"
+- platform: mqtt
+  name: IOController cupboard2 DI8
+  state_topic: "iocontroller/home/boards/cupboard2/digitalinput/8/status"
+- platform: mqtt
+  name: IOController cupboard2 connection
+  state_topic: "iocontroller/home/boards/cupboard2/connection"
+- platform: mqtt
+  name: Windows Office Left
+  state_topic: "windows/office/left/status"
+- platform: mqtt
+  name: Windows Office Right
+  state_topic: "windows/office/right/status"
+- platform: mqtt
+  name: Windows BackBedroom Left
+  state_topic: "windows/backbedroom/left/status"
+- platform: mqtt
+  name: Windows BackBedroom Right
+  state_topic: "windows/backbedroom/right/status"

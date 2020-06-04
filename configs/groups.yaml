@@ -38,6 +38,7 @@ indoors:
 #    - group.climate
     - group.lounge
     - group.office
+    - group.backbedroom
     - group.masterbedroom
     - group.sethbedroom
     - group.sethbed
@@ -90,6 +91,8 @@ development:
     - group.sethbed
     - group.quick_scenes
     - group.iocontrollerdev
+    - group.iocontrollercupboard1
+    - group.iocontrollercupboard2
 finance:
   name: Finance
   view: yes
@@ -166,6 +169,22 @@ office:
   entities:
     - sensor.office_door_template
     - switch.office_light
+    - sensor.windows_office_left
+    - script.windows_office_left_open
+    - script.windows_office_left_close
+    - sensor.windows_office_right
+    - script.windows_office_right_open
+    - script.windows_office_right_close
+backbedroom:
+  name: Back bedroom
+  control: hidden
+  entities:
+    - sensor.windows_backbedroom_left
+    - script.windows_backbedroom_left_open
+    - script.windows_backbedroom_left_close
+    - sensor.windows_backbedroom_right
+    - script.windows_backbedroom_right_open
+    - script.windows_backbedroom_right_close
 quick_scenes:
   name: Quick Scenes
   control: hidden
@@ -347,3 +366,45 @@ iocontrollerdev:
       - sensor.iocontroller_dev1_di6
       - sensor.iocontroller_dev1_di7
       - sensor.iocontroller_dev1_di8
+iocontrollercupboard1:
+    name: IOController cupboard1
+    control: hidden
+    entities:
+      - sensor.iocontroller_cupboard1_connection
+      - switch.iocontroller_cupboard1_do1
+      - switch.iocontroller_cupboard1_do2
+      - switch.iocontroller_cupboard1_do3
+      - switch.iocontroller_cupboard1_do4
+      - switch.iocontroller_cupboard1_do5
+      - switch.iocontroller_cupboard1_do6
+      - switch.iocontroller_cupboard1_do7
+      - switch.iocontroller_cupboard1_do8
+      - sensor.iocontroller_cupboard1_di1
+      - sensor.iocontroller_cupboard1_di2
+      - sensor.iocontroller_cupboard1_di3
+      - sensor.iocontroller_cupboard1_di4
+      - sensor.iocontroller_cupboard1_di5
+      - sensor.iocontroller_cupboard1_di6
+      - sensor.iocontroller_cupboard1_di7
+      - sensor.iocontroller_cupboard1_di8
+iocontrollercupboard2:
+    name: IOController cupboard2
+    control: hidden
+    entities:
+      - sensor.iocontroller_cupboard2_connection
+      - switch.iocontroller_cupboard2_do1
+      - switch.iocontroller_cupboard2_do2
+      - switch.iocontroller_cupboard2_do3
+      - switch.iocontroller_cupboard2_do4
+      - switch.iocontroller_cupboard2_do5
+      - switch.iocontroller_cupboard2_do6
+      - switch.iocontroller_cupboard2_do7
+      - switch.iocontroller_cupboard2_do8
+      - sensor.iocontroller_cupboard2_di1
+      - sensor.iocontroller_cupboard2_di2
+      - sensor.iocontroller_cupboard2_di3
+      - sensor.iocontroller_cupboard2_di4
+      - sensor.iocontroller_cupboard2_di5
+      - sensor.iocontroller_cupboard2_di6
+      - sensor.iocontroller_cupboard2_di7
+      - sensor.iocontroller_cupboard2_di8
