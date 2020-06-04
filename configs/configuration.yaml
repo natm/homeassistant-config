@@ -57,6 +57,8 @@ conversation:
 
 camera: !include cameras.yaml
 
+cover: !include cover.yaml
+
 light: !include lights.yaml
 
 binary_sensor: !include binary_sensors.yaml
