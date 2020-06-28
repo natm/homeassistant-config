@@ -60,3 +60,21 @@
   set_position_topic: 'somfy/0x279624/level/cmd'
   state_open: 100
   state_closed: 0
+- platform: mqtt
+  name: "Backbedroom blind left"
+  payload_open: 100
+  payload_close: 0
+  command_topic: 'somfy/0x279621/level/cmd'
+  position_topic: 'somfy/0x279621/level/set_state'
+  set_position_topic: 'somfy/0x279621/level/cmd'
+  state_open: 100
+  state_closed: 0
+- platform: mqtt
+  name: "Backbedroom blind right"
+  payload_open: 100
+  payload_close: 0
+  command_topic: 'somfy/0x279622/level/cmd'
+  position_topic: 'somfy/0x279622/level/set_state'
+  set_position_topic: 'somfy/0x279622/level/cmd'
+  state_open: 100
+  state_closed: 0
