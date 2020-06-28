@@ -138,3 +138,6 @@ influxdb:
     database: homeassistant
     max_retries: 3
     default_measurement: state
+
+roku:
+  - host: 193.47.147.211
