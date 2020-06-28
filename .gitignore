@@ -11,3 +11,4 @@ www
 venv/*
 *.pyc
 *.retry
+.idea/
