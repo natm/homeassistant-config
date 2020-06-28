@@ -42,3 +42,21 @@
   state_open: "OPEN"
   state_closed: "CLOSED"
   optimistic: false
+- platform: mqtt
+  name: "Office blind left"
+  payload_open: 100
+  payload_close: 0
+  command_topic: 'somfy/0x279623/level/cmd'
+  position_topic: 'somfy/0x279623/level/set_state'
+  set_position_topic: 'somfy/0x279623/level/cmd'
+  state_open: 100g
+  state_closed: 0
+- platform: mqtt
+  name: "Office blind right"
+  payload_open: 100
+  payload_close: 0
+  command_topic: 'somfy/0x279624/level/cmd'
+  position_topic: 'somfy/0x279624/level/set_state'
+  set_position_topic: 'somfy/0x279624/level/cmd'
+  state_open: 100
+  state_closed: 0
