@@ -26,30 +26,6 @@
   name: pirelay3 version
   state_topic: "pirelay3/version"
 - platform: mqtt
-  name: master bedroom temperature
-  unit_of_measurement: '°C'
-  state_topic: shellies/shellyht-E01602/sensor/temperature
-- platform: mqtt
-  name: master bedroom humidity
-  unit_of_measurement: '%'
-  state_topic: shellies/shellyht-E01602/sensor/humidity
-- platform: mqtt
-  name: master bedroom battery
-  unit_of_measurement: '%'
-  state_topic: shellies/shellyht-E01602/sensor/battery
-- platform: mqtt
-  name: lounge temperature
-  unit_of_measurement: '°C'
-  state_topic: shellies/shellyht-D0ED84/sensor/temperature
-- platform: mqtt
-  name: lounge humidity
-  unit_of_measurement: '%'
-  state_topic: shellies/shellyht-D0ED84/sensor/humidity
-- platform: mqtt
-  name: lounge battery
-  unit_of_measurement: '%'
-  state_topic: shellies/shellyht-D0ED84/sensor/battery
-- platform: mqtt
   name: greenhouse temperature
   unit_of_measurement: '°C'
   state_topic: shellies/shellyht-E01199/sensor/temperature
@@ -284,3 +260,55 @@
 - platform: mqtt
   name: IOController cupboard2 connection
   state_topic: "iocontroller/home/boards/cupboard2/connection"
+- platform: mqtt
+  name: downstairshallway temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/downstairshallway/temperature/value
+- platform: mqtt
+  name: kitchen temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/kitchen/temperature/value
+- platform: mqtt
+  name: lounge temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/lounge/temperature/value
+- platform: mqtt
+  name: playroom temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/playroom/temperature/value
+- platform: mqtt
+  name: sauna temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/sauna/temperature/value
+- platform: mqtt
+  name: utility temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/utility/temperature/value
+- platform: mqtt
+  name: backbedroom temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/backbedroom/temperature/value
+- platform: mqtt
+  name: ensuite temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/ensuite/temperature/value
+- platform: mqtt
+  name: mainlanding temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/mainlanding/temperature/value
+- platform: mqtt
+  name: master bedroom temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/masterbedroom/temperature/value
+- platform: mqtt
+  name: office temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/office/temperature/value
+- platform: mqtt
+  name: office landing temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/officelanding/temperature/value
+- platform: mqtt
+  name: office wc temperature
+  unit_of_measurement: '°C'
+  state_topic: areas/officewc/temperature/value
