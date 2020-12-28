@@ -1,4 +1,26 @@
 - platform: mqtt
+  name: "Ensuite window"
+  command_topic: "windows/ensuite/main/command"
+  state_topic: "windows/ensuite/main/status"
+  qos: 0
+  payload_open: "OPEN"
+  payload_close: "CLOSE"
+  payload_stop: "STOP"
+  state_open: "OPEN"
+  state_closed: "CLOSED"
+  optimistic: false
+- platform: mqtt
+  name: "Master bedroom window"
+  command_topic: "windows/masterbedroom/main/command"
+  state_topic: "windows/masterbedroom/main/status"
+  qos: 0
+  payload_open: "OPEN"
+  payload_close: "CLOSE"
+  payload_stop: "STOP"
+  state_open: "OPEN"
+  state_closed: "CLOSED"
+  optimistic: false
+- platform: mqtt
   name: "Office window left"
   command_topic: "windows/office/left/command"
   state_topic: "windows/office/left/status"
