@@ -84,34 +84,6 @@ notify:
 
 stream:
 
-tplink:
-  discovery: false
-  switch:
-
-    # HS100-1
-    # EEA7
-    # ac:84:c6:fc:ee:a7
-    # hair straigtners
-    - host: 10.76.16.13
-
-    # HS100-2
-    # 55D5
-    # ac:84:c6:59:55:d5
-    # christmas tree
-    - host: 10.76.16.14
-
-    # HS100-3
-    # 57B4
-    # ac:84:c6:59:57:b4
-    # lounge light
-    - host: 10.76.16.16
-
-    # HS100-4
-    # 2496
-    # ac:84:c6:69:24:96
-    # garland
-    - host: 10.76.16.19
-
 fastdotcom:
   scan_interval:
       minutes: 30
@@ -139,5 +111,5 @@ influxdb:
     max_retries: 3
     default_measurement: state
 
-roku:
-  - host: 193.47.147.211
+# roku:
+#  - host: 193.47.147.211
