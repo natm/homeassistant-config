@@ -4,18 +4,9 @@
   longitude: !secret location_longitude
   monitored_conditions:
   - temperature
-  - temperature_max
-  - temperature_min
   - humidity
   - precip_probability
   - cloud_cover
-- platform: yr
-- platform: speedtest
-  monitored_conditions:
-  - ping
-  - download
-  - upload
-  server_id: 16607
 - platform: mqtt
   name: pirelay1 version
   state_topic: "pirelay1/version"
