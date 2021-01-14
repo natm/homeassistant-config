@@ -1,87 +1,64 @@
-- platform: generic
-  name: ch1
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/101/picture
-  stream_source: !secret cctv_ch1_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: barnleft
+  still_image_url: http://frigate1.home.nat.ms:5000/barnleft/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/barnleft
 
-- platform: generic
-  name: ch2
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/201/picture
-  stream_source: !secret cctv_ch2_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: barnright
+  still_image_url: http://frigate1.home.nat.ms:5000/barnright/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/barnright
 
-- platform: generic
-  name: ch3
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/301/picture
-  stream_source: !secret cctv_ch3_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: bridge
+  still_image_url: http://frigate1.home.nat.ms:5000/bridge/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/bridge
 
-- platform: generic
-  name: ch5
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/501/picture
-  stream_source: !secret cctv_ch5_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: driveeast
+  still_image_url: http://frigate1.home.nat.ms:5000/driveeast/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/driveeast
 
-- platform: generic
-  name: ch6
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/601/picture
-  stream_source: !secret cctv_ch6_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: drivenorth
+  still_image_url: http://frigate1.home.nat.ms:5000/drivenorth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/drivenorth
 
-- platform: generic
-  name: ch7
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/701/picture
-  stream_source: !secret cctv_ch7_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: drivewest
+  still_image_url: http://frigate1.home.nat.ms:5000/drivewest/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/drivewest
 
-- platform: generic
-  name: ch9
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/901/picture
-  stream_source: !secret cctv_ch9_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: logsnorth
+  still_image_url: http://frigate1.home.nat.ms:5000/logsnorth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/logsnorth
 
-- platform: generic
-  name: ch10
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1001/picture
-  stream_source: !secret cctv_ch10_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: logssouth
+  still_image_url: http://frigate1.home.nat.ms:5000/logssouth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/logssouth
 
-- platform: generic
-  name: ch11
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1101/picture
-  stream_source: !secret cctv_ch11_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: pole
+  still_image_url: http://frigate1.home.nat.ms:5000/pole/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/pole
 
-- platform: generic
-  name: ch12
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1201/picture
-  stream_source: !secret cctv_ch12_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: rear
+  still_image_url: http://frigate1.home.nat.ms:5000/rear/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/rear
 
-- platform: generic
-  name: ch13
-  still_image_url: http://cctvnvr1.home.nat.ms/ISAPI/Streaming/channels/1301/picture
-  stream_source: !secret cctv_ch13_rtsp
-  username: !secret cctv_cctvnvr1_username
-  password: !secret cctv_cctvnvr1_password
-  authentication: digest
+- platform: mjpeg
+  name: shed
+  still_image_url: http://frigate1.home.nat.ms:5000/shed/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/shed
+
+- platform: mjpeg
+  name: utility
+  still_image_url: http://frigate1.home.nat.ms:5000/utility/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/utility
+
+- platform: mjpeg
+  name: workshop
+  still_image_url: http://frigate1.home.nat.ms:5000/workshop/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/workshop
