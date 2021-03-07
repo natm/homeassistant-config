@@ -1,64 +1,64 @@
 - platform: mjpeg
   name: barnleft
-  still_image_url: http://frigate1.home.nat.ms:5000/barnleft/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/barnleft
+  still_image_url: http://frigate1.home.nat.ms:5000/api/barnleft/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barnleft
 
 - platform: mjpeg
   name: barnright
-  still_image_url: http://frigate1.home.nat.ms:5000/barnright/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/barnright
+  still_image_url: http://frigate1.home.nat.ms:5000/api/barnright/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barnright
 
 - platform: mjpeg
   name: bridge
-  still_image_url: http://frigate1.home.nat.ms:5000/bridge/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/bridge
+  still_image_url: http://frigate1.home.nat.ms:5000/api/bridge/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/bridge
 
 - platform: mjpeg
   name: driveeast
-  still_image_url: http://frigate1.home.nat.ms:5000/driveeast/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/driveeast
+  still_image_url: http://frigate1.home.nat.ms:5000/api/driveeast/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/driveeast
 
 - platform: mjpeg
   name: drivenorth
-  still_image_url: http://frigate1.home.nat.ms:5000/drivenorth/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/drivenorth
+  still_image_url: http://frigate1.home.nat.ms:5000/api/drivenorth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/drivenorth
 
 - platform: mjpeg
   name: drivewest
-  still_image_url: http://frigate1.home.nat.ms:5000/drivewest/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/drivewest
+  still_image_url: http://frigate1.home.nat.ms:5000/api/drivewest/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/drivewest
 
 - platform: mjpeg
   name: logsnorth
-  still_image_url: http://frigate1.home.nat.ms:5000/logsnorth/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/logsnorth
+  still_image_url: http://frigate1.home.nat.ms:5000/api/logsnorth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/logsnorth
 
 - platform: mjpeg
   name: logssouth
-  still_image_url: http://frigate1.home.nat.ms:5000/logssouth/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/logssouth
+  still_image_url: http://frigate1.home.nat.ms:5000/api/logssouth/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/logssouth
 
 - platform: mjpeg
   name: pole
-  still_image_url: http://frigate1.home.nat.ms:5000/pole/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/pole
+  still_image_url: http://frigate1.home.nat.ms:5000/api/pole/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/pole
 
 - platform: mjpeg
   name: rear
-  still_image_url: http://frigate1.home.nat.ms:5000/rear/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/rear
+  still_image_url: http://frigate1.home.nat.ms:5000/api/rear/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/rear
 
 - platform: mjpeg
   name: shed
-  still_image_url: http://frigate1.home.nat.ms:5000/shed/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/shed
+  still_image_url: http://frigate1.home.nat.ms:5000/api/shed/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/shed
 
 - platform: mjpeg
   name: utility
-  still_image_url: http://frigate1.home.nat.ms:5000/utility/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/utility
+  still_image_url: http://frigate1.home.nat.ms:5000/api/utility/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/utility
 
 - platform: mjpeg
   name: workshop
-  still_image_url: http://frigate1.home.nat.ms:5000/workshop/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/workshop
+  still_image_url: http://frigate1.home.nat.ms:5000/api/workshop/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/workshop
