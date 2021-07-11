@@ -160,6 +160,14 @@
   retain: true
 
 - platform: mqtt
+  name: "Seth bedroom light"
+  state_topic: "shelly1/sethbedroom/stat/controller/POWER"
+  command_topic: "shelly1/sethbedroom/cmnd/controller/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
   name: "Sethbed local control"
   state_topic: "tractorbed/seth/service/stat/localcontrol"
   command_topic: "tractorbed/seth/service/cmnd/localcontrol"
