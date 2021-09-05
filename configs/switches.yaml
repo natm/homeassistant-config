@@ -176,6 +176,22 @@
   retain: false
 
 - platform: mqtt
+  name: "Wall down lights"
+  state_topic: "shelly1/walllights/stat/controller/POWER"
+  command_topic: "shelly1/walllights/cmnd/controller/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
+
+- platform: mqtt
+  name: "Postbox"
+  state_topic: "shelly1/postbox/stat/controller/POWER"
+  command_topic: "shelly1/postbox/cmnd/controller/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
+
+- platform: mqtt
   name: "Sethbed local control"
   state_topic: "tractorbed/seth/service/stat/localcontrol"
   command_topic: "tractorbed/seth/service/cmnd/localcontrol"
