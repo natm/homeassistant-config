@@ -149,7 +149,7 @@
   command_topic: "shelly1/office/cmnd/controller/POWER"
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Downstairs WC"
@@ -157,7 +157,7 @@
   command_topic: "shelly1/downstairswc/cmnd/controller/POWER"
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Seth bedroom light"
@@ -165,7 +165,15 @@
   command_topic: "shelly1/sethbedroom/cmnd/controller/POWER"
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
+
+- platform: mqtt
+  name: "Treehouse Festoon"
+  state_topic: "shelly1/treehousefestoon/stat/controller/POWER"
+  command_topic: "shelly1/treehousefestoon/cmnd/controller/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
 
 - platform: mqtt
   name: "Sethbed local control"
