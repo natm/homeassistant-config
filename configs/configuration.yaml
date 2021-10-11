@@ -16,7 +16,7 @@ http:
     - 127.0.0.1
     - ::1
     - 172.17.0.1
-    - 10.76.200.14
+    - 10.76.50.16
 
 mobile_app:
 
@@ -84,18 +84,6 @@ notify:
 
 stream:
 
-fastdotcom:
-  scan_interval:
-      minutes: 30
-
-speedtestdotnet:
-  scan_interval:
-    minutes: 30
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
 system_health:
 
 switch: !include switches.yaml
@@ -110,6 +98,3 @@ influxdb:
     database: homeassistant
     max_retries: 3
     default_measurement: state
-
-# roku:
-#  - host: 193.47.147.211
