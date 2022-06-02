@@ -1,12 +1,17 @@
 - platform: mjpeg
-  name: barnleft
-  still_image_url: http://frigate1.home.nat.ms:5000/api/barnleft/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barnleft
+  name: nursery
+  still_image_url: http://frigate1.home.nat.ms:5000/api/nursery/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/nursery
 
 - platform: mjpeg
-  name: barnright
-  still_image_url: http://frigate1.home.nat.ms:5000/api/barnright/latest.jpg
-  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barnright
+  name: barndoors
+  still_image_url: http://frigate1.home.nat.ms:5000/api/barndoors/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barndoors
+
+- platform: mjpeg
+  name: barnfront
+  still_image_url: http://frigate1.home.nat.ms:5000/api/barnfront/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/barnfront
 
 - platform: mjpeg
   name: bridge
