@@ -4,6 +4,11 @@
   mjpeg_url: http://frigate1.home.nat.ms:5000/api/nursery
 
 - platform: mjpeg
+  name: junction
+  still_image_url: http://frigate1.home.nat.ms:5000/api/junction/latest.jpg
+  mjpeg_url: http://frigate1.home.nat.ms:5000/api/junction
+
+- platform: mjpeg
   name: barndoors
   still_image_url: http://frigate1.home.nat.ms:5000/api/barndoors/latest.jpg
   mjpeg_url: http://frigate1.home.nat.ms:5000/api/barndoors
