@@ -35,6 +35,87 @@
   command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 3, "on": false}}'
 
 - platform: mqtt
+  schema: template
+  name: "Barn front highbays"
+  state_topic: "shelly4pm/barn_4pm_1/status/switch:0"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_1/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn rear highbays"
+  state_topic: "shelly4pm/barn_4pm_1/status/switch:1"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_1/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 1, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 1, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn understorage battens"
+  state_topic: "shelly4pm/barn_4pm_1/status/switch:2"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_1/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 2, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 2, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn rear festoon"
+  state_topic: "shelly4pm/barn_4pm_1/status/switch:3"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_1/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 3, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 3, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn seating fairy"
+  state_topic: "shelly4pm/barn_4pm_2/status/switch:0"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_2/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn front flood left"
+  state_topic: "shelly4pm/barn_4pm_2/status/switch:1"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_2/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 1, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 1, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn front festoon"
+  state_topic: "shelly4pm/barn_4pm_2/status/switch:2"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_2/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 2, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 2, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn front flood right"
+  state_topic: "shelly4pm/barn_4pm_2/status/switch:3"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_2/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 3, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 3, "on": false}}'
+
+- platform: mqtt
+  schema: template
+  name: "Barn understorage fairy"
+  state_topic: "shelly4pm/barn_4pm_3/status/switch:0"
+  state_template: "{% if value_json.output %}on{% else %}off{% endif %}"
+  command_topic: "shelly4pm/barn_4pm_3/rpc"
+  command_on_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": true}}'
+  command_off_template: '{"id": 1, "src":"homeassistant", "method": "Switch.Set", "params": {"id": 0, "on": false}}'
+
+- platform: mqtt
   name: "Workshop indoor lights"
   state_topic: "pirelay2/output1/status"
   command_topic: "pirelay2/output1/switch"
