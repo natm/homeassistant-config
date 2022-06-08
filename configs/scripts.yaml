@@ -16,3 +16,10 @@ outdoor_lighting_toggle:
       data_template:
         topic: 'outdoorlighting/command'
         payload: 'TOGGLE'
+barn_rollerdoor_toggle:
+  sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: 'shelly1/rollerdoor/cmnd/controller/POWER'
+        payload: 'BLINK'
+
