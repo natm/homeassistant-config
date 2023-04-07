@@ -1,0 +1,39 @@
+- name: "victron"
+  type: tcp
+  host: 10.76.16.40
+  port: 502
+  sensors:
+    - name: "System DC Volts"
+      data_type: uint16
+      unit_of_measurement: "V"
+      precision: 2
+      scale: 0.1
+      slave: 100
+      address: 840
+    - name: "System DC Current"
+      data_type: int16
+      unit_of_measurement: "A"
+      slave: 100
+      address: 841
+      precision: 2
+      scale: 0.01
+  switches:
+    - name: "Cerbo Relay 1 control"
+      slave: 100
+      address: 806
+      command_on: 1
+      command_off: 0
+      verify:
+        delay: 1
+        state_on: 1
+        state_off: 0
+    - name: "Cerbo Relay 2 control"
+      slave: 100
+      address: 807
+      command_on: 1
+      command_off: 0
+      verify:
+        delay: 1
+        state_on: 1
+        state_off: 0
+

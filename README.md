@@ -16,9 +16,9 @@ This git repo is the source of truth, changes are made in a clone and then pushe
 git clone git@github.com:natm/homeassistant-config.git
 git clone git@github.com:natm/homeassistant-config-secrets.git
 cd homeassistant-config
-virtualenv venv
+python3 -m venv venv
 source venv/bin/activate
-pip install git+git://github.com/ansible/ansible.git@devel
+pip install git+http://github.com/ansible/ansible.git@devel
 ```
 
 **Pushing configurations**

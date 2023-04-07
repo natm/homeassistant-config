@@ -71,6 +71,8 @@ scene: !include scenes.yaml
 
 zones: !include zones.yaml
 
+modbus: !include modbus.yaml
+
 notify:
   - name: slackbot
     platform: slack
