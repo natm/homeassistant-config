@@ -17,6 +17,14 @@
       address: 841
       precision: 2
       scale: 0.01
+    - name: 'Battery Power System'
+      unit_of_measurement: "W"
+      slave: 100
+      address: 842
+      data_type: int16
+      scale: 1.0
+      precision: 0
+      device_class: power
   switches:
     - name: "Cerbo Relay 1 control"
       slave: 100

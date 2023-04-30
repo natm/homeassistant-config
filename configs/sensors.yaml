@@ -104,73 +104,6 @@
   value_template: '{{ value_json.Uptime }}'
 #
 - platform: mqtt
-  name: starling joint balance amount
-  state_topic: finance/starling/joint/balances/amount
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint balance cleared
-  state_topic: finance/starling/joint/balances/clearedbalance
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint balance effective
-  state_topic: finance/starling/joint/balances/effectivebalance
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint balance pending
-  state_topic: finance/starling/joint/balances/pendingtransactions
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint balance available
-  state_topic: finance/starling/joint/balances/availabletospend
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint balance overdraft
-  state_topic: finance/starling/joint/balances/acceptedoverdraft
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling joint lastevent description
-  state_topic: finance/starling/joint/event/description
-- platform: mqtt
-  name: nasdaq nflx
-  state_topic: finance/stocks/nflx/ask
-  unit_of_measurement: '$'
-- platform: mqtt
-  name: starling goal roundup
-  state_topic: "finance/starling/joint/goals/Round up/saved"
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling goal total saved
-  state_topic: "finance/starling/joint/goals/total/saved"
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling goal total target
-  state_topic: "finance/starling/joint/goals/total/target"
-  unit_of_measurement: '£'
-- platform: mqtt
-  name: starling goal total percentage
-  state_topic: "finance/starling/joint/goals/total/percentage"
-  unit_of_measurement: '%'
-#
-#- platform: snmp
-#  name: internet uplink1 in
-#  host: rt1.home.nat.ms
-#  baseoid: 1.3.6.1.2.1.31.1.1.1.6.9
-#  community: !secret snmp_community
-#  version: '2c'
-#  scan_interval: 10
-#- platform: snmp
-#  name: internet uplink1 out
-#  host: rt1.home.nat.ms
-#  baseoid: 1.3.6.1.2.1.31.1.1.1.10.9
-#  community: !secret snmp_community
-#  version: '2c'
-#  scan_interval: 10
-- platform: google_travel_time
-  name: travel_time_haverfordwest
-  api_key: !secret google_maps_api
-  origin: Castlemorris, Haverfordwest SA62 5ES
-  destination: Haverfordwest
-- platform: mqtt
   name: IOController dev1 DI1
   state_topic: "iocontroller/dev/boards/dev1/digitalinput/1/status"
 - platform: mqtt
@@ -303,3 +236,76 @@
   name: office wc temperature
   unit_of_measurement: '°C'
   state_topic: areas/officewc/temperature/value
+# victron vebus
+- platform: mqtt
+  name: "victron vebus AC out power"
+  state_topic: "victron/local/vebus/276/Ac/Out/P"
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.value }}'
+- platform: mqtt
+  name: "victron vebus AC out current"      
+  state_topic: "victron/local/vebus/276/Ac/Out/L1/I"
+  unit_of_measurement: 'A'
+  value_template: '{{ value_json.value | int }}'
+
+# AC IN
+- platform: mqtt
+  name: "victron vebus AC in current limit"
+  state_topic: "victron/local/vebus/276/Ac/In/2/CurrentLimit"
+  unit_of_measurement: 'A'
+  value_template: '{{ value_json.value }}'
+- platform: mqtt
+  name: "victron vebus AC in current"
+  state_topic: "victron/local/vebus/276/Ac/ActiveIn/L1/I"
+  unit_of_measurement: 'A'
+  value_template: '{{ value_json.value }}'
+- platform: mqtt
+  name: "victron vebus AC in power"
+  state_topic: "victron/local/vebus/276/Ac/ActiveIn/L1/P"
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.value }}'
+
+# Inverter state
+- platform: mqtt
+  name: "victron vebus mode"
+  state_topic: "victron/local/vebus/276/Mode"
+  value_template: '{{ value_json.value }}'
+- platform: mqtt
+  name: "victron vebus state"
+  state_topic: "victron/local/vebus/276/State"
+  value_template: '{{ value_json.value }}'
+
+# victron solar
+- platform: mqtt
+  name: "victron solar current"
+  state_topic: "victron/local/system/0/Dc/Pv/Current"
+  unit_of_measurement: 'A'
+  value_template: '{{ value_json.value | int }}'
+- platform: mqtt
+  name: "victron solar power"
+  state_topic: "victron/local/system/0/Dc/Pv/Power"
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.value | int }}'
+
+
+# victron battery
+- platform: mqtt
+  name: "victron battery soc"  
+  state_topic: "victron/local/battery/512/Soc"
+  unit_of_measurement: '%'  
+  value_template: '{{ value_json.value }}'
+- platform: mqtt
+  name: "victron battery current"  
+  state_topic: "victron/local/battery/512/Dc/0/Current"
+  unit_of_measurement: 'A'  
+  value_template: '{{ value_json.value | int }}'
+- platform: mqtt
+  name: "victron battery power"
+  state_topic: "victron/local/battery/512/Dc/0/Power"
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.value | int }}'
+- platform: mqtt
+  name: "victron battery voltage"
+  state_topic: "victron/local/battery/512/Dc/0/Voltage"
+  unit_of_measurement: 'V'
+  value_template: '{{ value_json.value | int }}'
